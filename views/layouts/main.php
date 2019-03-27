@@ -40,6 +40,23 @@ Yii::$app->name="Jack Sistemas";
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
+            ['label'=> 'Proveedores',
+                'items'=>[
+                        ['label'=>'Inicio','url'=>['proveedores/index']],
+                        ['label'=>'Prueba','url'=>['proveedores/prueba']],
+                ],
+            ],
+
+            ['label' =>'Pagos',
+                'items'=>[
+                    ['label'=>'Inicio','url'=>['/pagos/index']],
+                    ['label'=>'Listar','url'=>['/pagos/view','id'=>1]],
+                    ['label'=>'Actualizar','url'=>['/pagos/update','id'=>1]],
+                    ['label'=>'Borrar','url'=>['/pagos/delete']],
+                    ],
+            ],
+
+           
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
