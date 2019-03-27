@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 26-03-2019 a las 14:02:39
+-- Tiempo de generación: 27-03-2019 a las 10:49:43
 -- Versión del servidor: 5.7.23
 -- Versión de PHP: 7.2.10
 
@@ -21,18 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `jack`
 --
+CREATE DATABASE IF NOT EXISTS `jack` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `jack`;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `caja`
+-- Estructura de tabla para la tabla `apertura`
 --
 
-DROP TABLE IF EXISTS `caja`;
-CREATE TABLE IF NOT EXISTS `caja` (
+DROP TABLE IF EXISTS `apertura`;
+CREATE TABLE IF NOT EXISTS `apertura` (
   `idFecha` int(6) NOT NULL AUTO_INCREMENT,
   `tiempoApertura` date NOT NULL,
-  `tiempoCierre` date NOT NULL,
   `montoInicial` float(6,2) NOT NULL,
   `obs` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`idFecha`)
@@ -52,6 +53,21 @@ CREATE TABLE IF NOT EXISTS `cargasgral` (
   `totalDiario` float(6,2) NOT NULL,
   PRIMARY KEY (`idCargas`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cierre`
+--
+
+DROP TABLE IF EXISTS `cierre`;
+CREATE TABLE IF NOT EXISTS `cierre` (
+  `idFecha` int(6) NOT NULL AUTO_INCREMENT,
+  `tiempoCierre` date NOT NULL,
+  `montoFinal` float(6,2) NOT NULL,
+  `obs` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`idFecha`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -168,7 +184,15 @@ CREATE TABLE IF NOT EXISTS `pagos` (
   `nroFacCompra` varchar(11) NOT NULL,
   PRIMARY KEY (`idPago`),
   KEY `fkPagosPro` (`idProveedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `pagos`
+--
+
+INSERT INTO `pagos` (`idPago`, `fecha`, `idProveedor`, `entrega`, `deuda`, `saldo`, `formaPago`, `nroFacCompra`) VALUES
+(1, '2019-10-05', 1, 5000.07, 5000.69, 0.00, 'EFECTIVO', '0000-00001'),
+(2, '2019-10-05', 2, 500.00, 1999.00, 1499.00, 'TARJETA DE CREDITO', '0000-00002');
 
 -- --------------------------------------------------------
 
@@ -204,10 +228,18 @@ CREATE TABLE IF NOT EXISTS `proveedores` (
   `tel_fijo` varchar(15) DEFAULT NULL,
   `tel_movil` varchar(15) DEFAULT NULL,
   `direcion` varchar(150) DEFAULT NULL,
-  `email` varchar(15) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
   `condicionIva` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idProveedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `proveedores`
+--
+
+INSERT INTO `proveedores` (`idProveedor`, `cuit`, `razonSocial`, `tel_fijo`, `tel_movil`, `direcion`, `email`, `condicionIva`) VALUES
+(1, '23-30729505-9', 'ODVSYSTEM', '3482468962', '348215558453', 'ANTONIO TABOAS 953', 'OMAR.VIRILI@GMAIL.COM', 'CONSUMIDOR FINAL'),
+(2, '27-44446666-8', 'LA RED', '3482468962', '348215558453', 'ANTONIO TABOASFASDF SDAFA', 'OMAR.VIRILI.DARIO@GMAIL.COM', 'RESPONSABLE INSCRIPTO');
 
 -- --------------------------------------------------------
 

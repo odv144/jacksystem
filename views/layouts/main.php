@@ -55,6 +55,17 @@ Yii::$app->name="Jack Sistemas";
                     ['label'=>'Borrar','url'=>['/pagos/delete']],
                     ],
             ],
+            ['label' =>'Clientes',
+                'items'=>[
+                    ['label'=>'Inicio','url'=>['/clientes/index']],
+                    ['label'=>'Prueba de consultas','url'=>['/clientes/prueba']],
+                    ['label'=>'Listar','url'=>['/clientes/view','id'=>1]],
+                    ['label'=>'Actualizar','url'=>['/clientes/update','id'=>1]],
+                    ['label'=>'Borrar','url'=>['/clientes/delete']],
+                    ['label'=>'Servio Tecnico','url'=>['/sertec/index']],
+                    ['label'=>'Equipos','url'=>['/equiposervicios/index']],
+                    ],
+            ],
 
            
             ['label' => 'About', 'url' => ['/site/about']],

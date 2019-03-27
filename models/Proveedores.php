@@ -38,9 +38,7 @@ class Proveedores extends \yii\db\ActiveRecord
             [['cuit'], 'string', 'max' => 13],
             [['razonSocial', 'condicionIva'], 'string', 'max' => 100],
             [['tel_fijo', 'tel_movil'], 'string', 'max' => 15],
-            [['direcion'], 'string', 'max' => 150],
-            [['email'], 'string', 'max' => 150],
-
+            [['direcion', 'email'], 'string', 'max' => 150],
         ];
     }
 

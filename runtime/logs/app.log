@@ -3990,3 +3990,1402 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1553650143.309
     'REQUEST_TIME' => 1553650143
 ]
+2019-03-27 12:19:43 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\www\jacksystem\controllers\ClientesController.php:133
+Stack trace:
+#0 C:\wamp64\www\jacksystem\controllers\ClientesController.php(87): app\controllers\ClientesController->findModel('1')
+#1 [internal function]: app\controllers\ClientesController->actionUpdate('1')
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('clientes/update', Array)
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-03-27 12:19:43 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/update'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fupdate&id=1'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689183.098
+    'REQUEST_TIME' => 1553689183
+]
+2019-03-27 12:19:46 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "serte/index". in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('serte/index', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-03-27 12:19:46 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'serte/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fupdate&id=1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=serte%2Findex'
+    'REQUEST_URI' => '/index.php?r=serte%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689186.143
+    'REQUEST_TIME' => 1553689186
+]
+2019-03-27 12:19:48 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "equipos/dindex". in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('equipos/dindex', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-03-27 12:19:48 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'equipos/dindex'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=serte%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=equipos%2Fdindex'
+    'REQUEST_URI' => '/index.php?r=equipos%2Fdindex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689188.924
+    'REQUEST_TIME' => 1553689188
+]
+2019-03-27 12:19:51 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "serte/index". in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('serte/index', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-03-27 12:19:51 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'serte/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=equipos%2Fdindex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=serte%2Findex'
+    'REQUEST_URI' => '/index.php?r=serte%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689191.096
+    'REQUEST_TIME' => 1553689191
+]
+2019-03-27 12:20:06 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "serte/index". in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('serte/index', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-03-27 12:20:06 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'serte/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63362'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=serte%2Findex'
+    'REQUEST_URI' => '/index.php?r=serte%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689206.13
+    'REQUEST_TIME' => 1553689206
+]
+2019-03-27 12:20:37 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "serte/index". in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('serte/index', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-03-27 12:20:37 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'serte/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63366'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=serte%2Findex'
+    'REQUEST_URI' => '/index.php?r=serte%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689237.912
+    'REQUEST_TIME' => 1553689237
+]
+2019-03-27 12:20:43 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: equiposervicios/dindex in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php:128
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('dindex', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('equiposervicios...', Array)
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-03-27 12:20:43 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'equiposervicios/dindex'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=sertec%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63366'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=equiposervicios%2Fdindex'
+    'REQUEST_URI' => '/index.php?r=equiposervicios%2Fdindex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689243.467
+    'REQUEST_TIME' => 1553689243
+]
+2019-03-27 12:22:00 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: equiposervicios/dindex in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php:128
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('dindex', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('equiposervicios...', Array)
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-03-27 12:22:00 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'equiposervicios/dindex'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=sertec%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63373'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=equiposervicios%2Fdindex'
+    'REQUEST_URI' => '/index.php?r=equiposervicios%2Fdindex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689320.732
+    'REQUEST_TIME' => 1553689320
+]
+2019-03-27 12:23:49 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][Error] Error: Class 'app\models\Equipservicios' not found in C:\wamp64\www\jacksystem\models\Sertec.php:44
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Model.php(464): app\models\Sertec->rules()
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Model.php(420): yii\base\Model->createValidators()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Model.php(189): yii\base\Model->getValidators()
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Model.php(816): yii\base\Model->scenarios()
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Model.php(434): yii\base\Model->activeAttributes()
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Model.php(494): yii\base\Model->getActiveValidators('idCliente')
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\widgets\ActiveField.php(921): yii\base\Model->isAttributeRequired('idCliente')
+#7 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\widgets\ActiveField.php(402): yii\widgets\ActiveField->addAriaAttributes(Array)
+#8 C:\wamp64\www\jacksystem\views\Sertec\_form.php(15): yii\widgets\ActiveField->textInput()
+#9 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\j...')
+#10 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\j...', Array)
+#11 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\j...', Array, NULL)
+#12 C:\wamp64\www\jacksystem\views\Sertec\create.php(17): yii\base\View->render('_form', Array)
+#13 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\j...')
+#14 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\j...', Array)
+#15 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\j...', Array, Object(app\controllers\SertecController))
+#16 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\SertecController))
+#17 C:\wamp64\www\jacksystem\controllers\SertecController.php(74): yii\base\Controller->render('create', Array)
+#18 [internal function]: app\controllers\SertecController->actionCreate()
+#19 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#20 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#21 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#22 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('sertec/create', Array)
+#23 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#25 {main}
+2019-03-27 12:23:49 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'sertec/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=sertec%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63387'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=sertec%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=sertec%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689429.323
+    'REQUEST_TIME' => 1553689429
+]
+2019-03-27 12:31:17 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\www\jacksystem\controllers\ClientesController.php:133
+Stack trace:
+#0 C:\wamp64\www\jacksystem\controllers\ClientesController.php(114): app\controllers\ClientesController->findModel(2)
+#1 [internal function]: app\controllers\ClientesController->actionPrueba()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('prueba', Array)
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('clientes/prueba', Array)
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-03-27 12:31:17 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=proveedores%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63435'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553689877.07
+    'REQUEST_TIME' => 1553689877
+]
+2019-03-27 12:34:07 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\www\jacksystem\controllers\ClientesController.php:133
+Stack trace:
+#0 C:\wamp64\www\jacksystem\controllers\ClientesController.php(114): app\controllers\ClientesController->findModel(2)
+#1 [internal function]: app\controllers\ClientesController->actionPrueba()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('prueba', Array)
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('clientes/prueba', Array)
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-03-27 12:34:07 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=proveedores%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63451'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553690047.244
+    'REQUEST_TIME' => 1553690047
+]
+2019-03-27 12:34:11 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\www\jacksystem\controllers\ClientesController.php:133
+Stack trace:
+#0 C:\wamp64\www\jacksystem\controllers\ClientesController.php(114): app\controllers\ClientesController->findModel(2)
+#1 [internal function]: app\controllers\ClientesController->actionPrueba()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('prueba', Array)
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('clientes/prueba', Array)
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-03-27 12:34:11 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63451'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553690051.609
+    'REQUEST_TIME' => 1553690051
+]
+2019-03-27 12:34:17 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in C:\wamp64\www\jacksystem\controllers\ClientesController.php:133
+Stack trace:
+#0 C:\wamp64\www\jacksystem\controllers\ClientesController.php(114): app\controllers\ClientesController->findModel(2)
+#1 [internal function]: app\controllers\ClientesController->actionPrueba()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('prueba', Array)
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('clientes/prueba', Array)
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-03-27 12:34:17 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63458'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553690057.336
+    'REQUEST_TIME' => 1553690057
+]
+2019-03-27 12:35:15 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\wamp64\www\jacksystem\controllers\ClientesController.php:117
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\ClientesController->runAction()
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#5 C:\wamp64\www\jacksystem\web\index.php(12): yii\web\Application->run()
+#6 {main}
+2019-03-27 12:35:15 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63460'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553690115.204
+    'REQUEST_TIME' => 1553690115
+]
+2019-03-27 12:45:10 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: app\models\Clientes::sertecs() in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 C:\wamp64\www\jacksystem\views\Clientes\prueba.php(8): yii\base\Component->__call('sertecs', Array)
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\j...')
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\j...', Array)
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\j...', Array, Object(app\controllers\ClientesController))
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('prueba', Array, Object(app\controllers\ClientesController))
+#5 C:\wamp64\www\jacksystem\controllers\ClientesController.php(117): yii\base\Controller->render('prueba', Array)
+#6 [internal function]: app\controllers\ClientesController->actionPrueba()
+#7 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('prueba', Array)
+#10 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('clientes/prueba', Array)
+#11 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-03-27 12:45:10 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63517'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553690710.165
+    'REQUEST_TIME' => 1553690710
+]
+2019-03-27 12:51:23 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'equipo' of non-object in C:\wamp64\www\jacksystem\views\Clientes\prueba.php:9
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\wamp64\www\jacksystem\controllers\ClientesController.php(117): app\controllers\ClientesController->render()
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\ClientesController->actionPrueba()
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\ClientesController->runAction()
+#8 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\jacksystem\web\index.php(12): yii\web\Application->run()
+#11 {main}
+2019-03-27 12:51:23 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63538'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553691083.868
+    'REQUEST_TIME' => 1553691083
+]
+2019-03-27 13:17:14 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\base\ErrorException:2] yii\base\ErrorException: Use of undefined constant idServicio - assumed 'idServicio' (this will throw an Error in a future version of PHP) in C:\wamp64\www\jacksystem\views\Clientes\prueba.php:6
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\wamp64\www\jacksystem\controllers\ClientesController.php(117): app\controllers\ClientesController->render()
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\ClientesController->actionPrueba()
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\ClientesController->runAction()
+#8 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\jacksystem\web\index.php(12): yii\web\Application->run()
+#11 {main}
+2019-03-27 13:17:14 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63637'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553692634.762
+    'REQUEST_TIME' => 1553692634
+]
+2019-03-27 13:17:29 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\base\ErrorException:2] yii\base\ErrorException: Use of undefined constant idServicio - assumed 'idServicio' (this will throw an Error in a future version of PHP) in C:\wamp64\www\jacksystem\views\Clientes\prueba.php:6
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\wamp64\www\jacksystem\controllers\ClientesController.php(117): app\controllers\ClientesController->render()
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\ClientesController->actionPrueba()
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\ClientesController->runAction()
+#8 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\jacksystem\web\index.php(12): yii\web\Application->run()
+#11 {main}
+2019-03-27 13:17:29 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63639'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553692649.199
+    'REQUEST_TIME' => 1553692649
+]
+2019-03-27 13:17:58 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'idServicio' of non-object in C:\wamp64\www\jacksystem\views\Clientes\prueba.php:6
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\web\View->renderPhpFile()
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\web\View->renderFile()
+#2 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(384): yii\web\View->render()
+#3 C:\wamp64\www\jacksystem\controllers\ClientesController.php(117): app\controllers\ClientesController->render()
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\ClientesController->actionPrueba()
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): app\controllers\ClientesController->runAction()
+#8 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\web\Application->runAction()
+#9 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\jacksystem\web\index.php(12): yii\web\Application->run()
+#11 {main}
+2019-03-27 13:17:58 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63642'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553692678.803
+    'REQUEST_TIME' => 1553692678
+]
+2019-03-27 13:21:34 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Equiposervicios::0 in C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('0')
+#1 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Model.php(1026): yii\db\BaseActiveRecord->__get('0')
+#2 C:\wamp64\www\jacksystem\views\Clientes\prueba.php(7): yii\base\Model->offsetGet(0)
+#3 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(348): require('C:\\wamp64\\www\\j...')
+#4 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\wamp64\\www\\j...', Array)
+#5 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\j...', Array, Object(app\controllers\ClientesController))
+#6 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('prueba', Array, Object(app\controllers\ClientesController))
+#7 C:\wamp64\www\jacksystem\controllers\ClientesController.php(117): yii\base\Controller->render('prueba', Array)
+#8 [internal function]: app\controllers\ClientesController->actionPrueba()
+#9 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('prueba', Array)
+#12 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('clientes/prueba', Array)
+#13 C:\wamp64\www\jacksystem\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\wamp64\www\jacksystem\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2019-03-27 13:21:34 [::1][-][lvqob7c72hhrt9fb4ogr0ci27r][info][application] $_GET = [
+    'r' => 'clientes/prueba'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lvqob7c72hhrt9fb4ogr0ci27r'
+    '_csrf' => '38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'www.jacksistema.odv'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.jacksistema.odv/index.php?r=clientes%2Fprueba'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'PHPSESSID=lvqob7c72hhrt9fb4ogr0ci27r; _csrf=38fef5e8793ac3d5412b8cde7915dca0354fbbda8e3147fb177efcbad45aee28a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_tbYtxudltB7VVhcKMqn5mw9ps0ZlEjr%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\wamp64\\bin\\php\\php7.2.10;C:\\ProgramData\\ComposerSetup\\bin;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.35 (Win64) PHP/7.2.10 Server at www.jacksistema.odv Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) PHP/7.2.10'
+    'SERVER_NAME' => 'www.jacksistema.odv'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/jacksystem/web'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/jacksystem/web/index.php'
+    'REMOTE_PORT' => '63655'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=clientes%2Fprueba'
+    'REQUEST_URI' => '/index.php?r=clientes%2Fprueba'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1553692894.867
+    'REQUEST_TIME' => 1553692894
+]

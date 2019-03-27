@@ -19,6 +19,63 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "views/layouts/main.php",
+			"settings":
+			{
+				"buffer_size": 2900,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/Proveedores/prueba.php",
+			"settings":
+			{
+				"buffer_size": 518,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "controllers/ProveedoresController.php",
+			"settings":
+			{
+				"buffer_size": 3611,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "models/Pagos.php",
+			"settings":
+			{
+				"buffer_size": 1744,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "models/Proveedores.php",
+			"settings":
+			{
+				"buffer_size": 1581,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/Proveedores/view.php",
+			"settings":
+			{
+				"buffer_size": 1128,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/Pagos/index.php",
+			"settings":
+			{
+				"buffer_size": 800,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -57,10 +114,20 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp64/www/jack"
+		"/C/wamp64/www/jacksystem",
+		"/C/wamp64/www/jacksystem/controllers",
+		"/C/wamp64/www/jacksystem/models",
+		"/C/wamp64/www/jacksystem/views",
+		"/C/wamp64/www/jacksystem/views/layouts",
+		"/C/wamp64/www/jacksystem/views/Pagos",
+		"/C/wamp64/www/jacksystem/views/Proveedores"
 	],
 	"file_history":
 	[
+		"/C/wamp64/www/jacksystem/controllers/PagosController.php",
+		"/C/wamp64/www/jacksystem/views/Pagos/view.php",
+		"/C/wamp64/www/git/master/views/layouts/main.php",
+		"/C/wamp64/www/webmodelo/views/layouts/main.php",
 		"/C/wamp64/www/prueba5/config/params.php",
 		"/C/wamp64/www/prueba5/config/db.php",
 		"/C/wamp64/www/mysql/crud.php",
@@ -72,7 +139,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -86,6 +153,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			");\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -103,14 +171,224 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "views/layouts/main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1391,
+								1391
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/Proveedores/prueba.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 518,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								337,
+								337
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "controllers/ProveedoresController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2895,
+								2895
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1251.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "models/Pagos.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1460,
+								1469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "models/Proveedores.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1581,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1518,
+								1535
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/Proveedores/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								957,
+								968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/Pagos/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								702,
+								702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -147,7 +425,7 @@
 	"project": "jacksistema.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
