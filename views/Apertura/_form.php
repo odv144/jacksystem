@@ -7,12 +7,15 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Apertura */
 /* @var $form yii\widgets\ActiveForm */
 ?>
+<?php 
 
-<div class="apertura-form">
+//echo date('Y-m-d H:i:s'); ?>
+<div class="apertura-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'tiempoApertura')->textInput() ?>
+    <?= $form->field($model, 'tiempoApertura')->textInput(['value' =>
+      date('Y-m-d H:i:s'), 'disable'=>'disable']) ?>
 
     <?= $form->field($model, 'montoInicial')->textInput() ?>
 

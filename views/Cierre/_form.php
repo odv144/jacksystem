@@ -8,11 +8,11 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="cierre-form">
+<div class="cierre-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'tiempoCierre')->textInput() ?>
+    <?= $form->field($model, 'tiempoCierre')->textInput(['value'=>date('Y-m-d H:i:s'),'readonly'=>'readonly']) ?>
 
     <?= $form->field($model, 'montoFinal')->textInput() ?>
 

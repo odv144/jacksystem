@@ -65,10 +65,11 @@ class CargasgralController extends Controller
     public function actionCreate()
     {
         $model = new Cargasgral();
-
+        
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idCarga]);
         }
+    
 
         return $this->render('create', [
             'model' => $model,

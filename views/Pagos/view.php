@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'idPago',
             'fecha',
-            'idProveedor',
+            'proveedor.razonSocial',
             'entrega',
             'deuda',
             'saldo',

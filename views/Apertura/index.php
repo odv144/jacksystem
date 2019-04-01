@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Aperturas';
+$this->title = 'Apertura de caja diaria';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="apertura-index">
@@ -21,9 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 
-            'idFecha',
+            //'idFecha',
             'tiempoApertura',
             'montoInicial',
             'obs',

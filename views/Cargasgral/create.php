@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Cargasgral */
 
-$this->title = 'Create Cargasgral';
-$this->params['breadcrumbs'][] = ['label' => 'Cargasgrals', 'url' => ['index']];
+$this->title = 'Nuevo Registro de Carga';
+$this->params['breadcrumbs'][] = ['label' => 'Cargas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="cargasgral-create">

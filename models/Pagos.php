@@ -34,8 +34,8 @@ class Pagos extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['fecha', 'idProveedor', 'entrega', 'deuda', 'saldo', 'formaPago', 'nroFacCompra'], 'required'],
-            [['fecha'], 'safe'],
+            [['fecha', 'idProveedor', 'entrega', 'deuda',  'formaPago', 'nroFacCompra'], 'required'],
+            [['fecha','saldo'], 'safe'],
             [['idProveedor'], 'integer'],
             [['entrega', 'deuda', 'saldo'], 'number'],
             [['formaPago'], 'string', 'max' => 100],

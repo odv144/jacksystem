@@ -21,17 +21,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 
-            'idCliente',
+            //'idCliente',
             'dni',
             'apellido',
             'nombre',
             'domicilio',
-            //'localidad',
-            //'telfijo',
-            //'telmovil',
-            //'email:email',
+            'localidad',
+            'telfijo',
+            'telmovil',
+            'email:email',
             //'cuit',
             //'condicionIva',
 

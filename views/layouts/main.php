@@ -67,6 +67,24 @@ Yii::$app->name="Jack Sistemas";
                     ],
             ],
 
+            ['label' =>'apertura',
+                'items'=>[
+                    ['label'=>'Inicio','url'=>['/apertura/index']],
+                    ['label'=>'Listar','url'=>['/apertura/view','id'=>1]],
+                    ['label'=>'Actualizar','url'=>['/apertura/update','id'=>1]],
+                    ['label'=>'Borrar','url'=>['/apertura/delete']],
+                    ],
+            ],
+            ['label' =>'Cargas',
+                'items'=>[
+                    ['label'=>'Inicio','url'=>['/cargasgral/index']],
+                    ['label'=>'Listar','url'=>['/cargasgral/view','id'=>1]],
+                    ['label'=>'Actualizar','url'=>['/cargasgral/update','id'=>1]],
+                    ['label'=>'Borrar','url'=>['/cargasgral/delete']],
+                    ],
+            ],
+
+
            
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],

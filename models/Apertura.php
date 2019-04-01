@@ -28,7 +28,7 @@ class Apertura extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tiempoApertura', 'montoInicial'], 'required'],
+            [['montoInicial'], 'required'],
             [['tiempoApertura'], 'safe'],
             [['montoInicial'], 'number'],
             [['obs'], 'string', 'max' => 150],
@@ -41,8 +41,8 @@ class Apertura extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idFecha' => 'Id Fecha',
-            'tiempoApertura' => 'Tiempo Apertura',
+            'idFecha' => 'id Fecha',
+            'tiempoApertura' => 'Fecha y Hora de Apertura de Caja',
             'montoInicial' => 'Monto Inicial',
             'obs' => 'Obs',
         ];

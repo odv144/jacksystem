@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * ApeturaController implements the CRUD actions for Apertura model.
  */
-class ApeturaController extends Controller
+class AperturaController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -67,7 +67,8 @@ class ApeturaController extends Controller
         $model = new Apertura();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idFecha]);
+             return $this->redirect(['view', 'id' => $model->idFecha]);
+            
         }
 
         return $this->render('create', [

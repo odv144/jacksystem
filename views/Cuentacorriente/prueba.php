@@ -12,7 +12,7 @@ use yii\helpers\ArrayHelper;
 
     $listData = ArrayHelper::map($datos,'idCliente','nombre');
     $listData2 =ArrayHelper::map($datos,'idCliente','apellido');
-    $x='0001-00045';
+    
     $ambos[0]='SELECCIONE CLIENTE';
     foreach ($listData as $key => $value) 
     {
@@ -28,11 +28,11 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'idCliente')->dropDownList($ambos) ?>
 
-    <?= $form->field($model, 'fechaMov')->textInput(['value'=>date('Y-m-d H:i:s'),'readonly'=>'readonly']) ?>
+    <?= $form->field($model, 'nroFactura')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'nroFactura')->textInput(['value'=>(isset($x)?$x:''),'maxlength' => true]) ?>
+    <?= $form->field($model, 'fechaMov')->textInput() ?>
 
-    <?= $form->field($model, 'entrega')->textInput()?>
+    <?= $form->field($model, 'entrega')->textInput() ?>
 
     <?= $form->field($model, 'deuda')->textInput() ?>
 

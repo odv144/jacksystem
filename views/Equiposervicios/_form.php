@@ -8,11 +8,11 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="equiposervicios-form">
+<div class="equiposervicios-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'marca')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'marca')->dropDownList(['Motorola'=>'Motorola','LG'=>'LG','Nokia'=>'Nokia','IPHONE'=>'IPHONE','samsung'=>'samsung']) ?>
 
     <?= $form->field($model, 'modelo')->textInput(['maxlength' => true]) ?>
 

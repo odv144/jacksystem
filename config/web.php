@@ -2,11 +2,12 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
-
+//date_default_timezone_set('America/Argentina/Buenos_Aires');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'timeZone'=>'America/Argentina/Buenos_Aires',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',

@@ -8,13 +8,13 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="cargasgral-form">
+<div class='form-inline'>
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin() ?>
 
-    <?= $form->field($model, 'fecha')->textInput() ?>
+    <?= $form->field($model, 'fecha')->textInput(['value'=>date('Y-m-d H:i:s'),'readonly'=>'readonly']) ?>
 
-    <?= $form->field($model, 'detalle')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'detalle')->dropdownlist(['Virtual Ex Claro'=>'Virtual Ex Claro','Carga Express'=>'Carga Express','Saldo Virtual'=>'Saldo Virtual']) ?>
 
     <?= $form->field($model, 'totalDiario')->textInput() ?>
 
@@ -23,5 +23,5 @@ use yii\widgets\ActiveForm;
     </div>
 
     <?php ActiveForm::end(); ?>
-
+   
 </div>

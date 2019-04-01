@@ -25,7 +25,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'idPago',
             'fecha',
-            'idProveedor',
+            /*
+            ['header'=>'Proveedor',
+            'value'=>function ($date){
+                return $date->proveedor->razonSocial;
+            }],
+            */
+            ['value'=>'proveedor.razonSocial',
+            'header'=>'Proveedor','headerOptions'=>['ahref'=>"/pagos/index&sort=proveedor",'data-sort'=>'proveedor']],
             'entrega',
             'deuda',
             'saldo',
@@ -33,6 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'nroFacCompra',
 
             ['class' => 'yii\grid\ActionColumn'],
+            
         ],
     ]); ?>
 

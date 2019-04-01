@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Cuentacorriente;
+use app\models\Clientes;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -65,15 +66,28 @@ class CuentacorrienteController extends Controller
     public function actionCreate()
     {
         $model = new Cuentacorriente();
+        $modCli = new Clientes();
+        $datos  = $modCli->find()->all();//de esta forma obtengo todo los datos de la tabla en array
+       
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idCtaCte]);
         }
 
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+        return $this->render('create', ['model' => $model,'modCli'=>$modCli,'datos'=>$datos]);
     }
+    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+    public function actionPrueba()
+    {
+        $model = new Cuentacorriente();
+        $modCli=new clientes();
+        $datos = $modCli->find()->all();
+
+        return $this->render('prueba',['model'=>$model,'modcli'=>$modCli,'datos'=>$datos]);
+
+    }
+
+    /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
     /**
      * Updates an existing Cuentacorriente model.

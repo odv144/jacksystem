@@ -8,13 +8,13 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="gastos-form">
+<div class="gastos-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'fecha')->textInput() ?>
+    <?= $form->field($model, 'fecha')->textInput(['value'=>date('Y-m-d H:i:s'),'readonly'=>'readonly']) ?>
 
-    <?= $form->field($model, 'detalle')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'detalle')->textInput(['maxlength' => true,'width'=>'33%']) ?>
 
     <?= $form->field($model, 'monto')->textInput() ?>
 

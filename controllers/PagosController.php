@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Pagos;
+use app\models\Proveedores;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -65,13 +66,19 @@ class PagosController extends Controller
     public function actionCreate()
     {
         $model = new Pagos();
+        
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) 
+        {
+          $model['saldo']=$model['entrega']-$model['deuda'];
+          $model->save();
+        
             return $this->redirect(['view', 'id' => $model->idPago]);
         }
-
+        $modPro = new Proveedores();
+        $datos  = $modPro->find()->all();
         return $this->render('create', [
-            'model' => $model,
+            'model' => $model,'modPro'=>$modPro,'datos'=>$datos,
         ]);
     }
 
@@ -86,12 +93,16 @@ class PagosController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idPago]);
+        if ($model->load(Yii::$app->request->post())) 
+        {
+          $model['saldo']=$model['entrega']-$model['deuda'];
+          $model->save();
+             return $this->redirect(['view', 'id' => $model->idPago]);
         }
-
+        $modPro = new Proveedores();
+        $datos  = $modPro->find()->all();
         return $this->render('update', [
-            'model' => $model,
+            'model' => $model,'modPro'=>$modPro,'datos'=>$datos,
         ]);
     }
 
