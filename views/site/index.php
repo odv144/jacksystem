@@ -45,7 +45,7 @@ use yii\helpers\url;
             <p><a class="btn btn-lg btn-success" href=<?=Url::to(['pagos/index'])?> >Gestion de Pagos</a></p>
         </div>
        <div class="col-lg-3"> 
-            <p><a class="btn btn-lg btn-success" href=<?=Url::to(['prodctos/index'])?> >Productos para Venta</a></p>
+            <p><a class="btn btn-lg btn-success" href=<?=Url::to(['productos/index'])?> >Productos para Venta</a></p>
         </div>
        <div class="col-lg-3">
             <p><a class="btn btn-lg btn-success" href=<?= Url::to(['proveedores/index'])?> >Proveedores</a></p>
@@ -60,7 +60,7 @@ use yii\helpers\url;
                 <p><a class="btn btn-lg btn-success" href=<?= Url::to(['ventas/index'])?> >Gestion de Ventas</a></p>
             </div>
        <div class="col-lg-3"> 
-            <p><a class="btn btn-lg btn-success" href=<?=Url::to(['clientes/prueba'])?> >Formularios de consltas de pruebas</a></p>
+            <p><a class="btn btn-lg btn-success" href=<?=Url::to(['site/formulario'])?> >Informe PDF</a></p>
         </div>
       </div>
 

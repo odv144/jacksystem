@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sertecs';
+$this->title = 'Servicio Tecnico';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sertec-index">
@@ -14,18 +14,22 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Sertec', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear nuevo servicio', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+           // ['class' => 'yii\grid\SerialColumn'],
 
             'idServicio',
-            'idCliente',
-            'idEquipo',
+            //'idCliente',
+            'cliente.nombre',
+            'cliente.apellido',
+            //'idEquipo',
+            'equipo.modelo',
+            'equipo.marca',
             'detalle',
             'estado',
             //'usoRepuesto',

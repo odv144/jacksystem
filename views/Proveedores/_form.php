@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="proveedores-form">
+<div class="proveedores-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -24,7 +24,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'condicionIva')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'condicionIva')->dropDownList(['CONSUMIDOR FINAL'=>'CONSUMIDOR FINAL','RESPONSBLE INSCRIPTO'=>'RESPONSBLE INSCRIPTO']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

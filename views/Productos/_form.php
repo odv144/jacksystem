@@ -2,17 +2,19 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Productos */
 /* @var $form yii\widgets\ActiveForm */
+$lista=ArrayHelper::map($datos,'idProveedor','razonSocial');
 ?>
 
-<div class="productos-form">
+<div class="productos-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'idProveedor')->textInput() ?>
+    <?= $form->field($model, 'idProveedor')->dropDownList($lista)->label('Proveedor') ?>
 
     <?= $form->field($model, 'detalle')->textInput(['maxlength' => true]) ?>
 

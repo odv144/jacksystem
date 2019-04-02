@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Ventas;
+use app\models\Detalleventa;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -65,13 +66,17 @@ class VentasController extends Controller
     public function actionCreate()
     {
         $model = new Ventas();
+         echo '<pre>';   
+            print_r(Yii::$app->request->post());
 
+        echo '</pre>';
+        Yii::$app->end();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idVenta]);
         }
-
+        $modDet = new Detalleventa();
         return $this->render('create', [
-            'model' => $model,
+            'model' => $model,'modDet'=>$modDet,
         ]);
     }
 

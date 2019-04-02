@@ -21,10 +21,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 
             'idProducto',
-            'idProveedor',
+            'proveedor.razonSocial',
             'detalle',
             'p_u',
             'iva',

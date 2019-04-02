@@ -32,7 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'idPago',
             'fecha',
             'proveedor.razonSocial',
-            'entrega',
             'deuda',
             'saldo',
             'formaPago',

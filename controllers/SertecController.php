@@ -4,6 +4,8 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Sertec;
+use app\models\Clientes;
+use app\models\Equiposervicios;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -69,9 +71,12 @@ class SertecController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idServicio]);
         }
-
+        $modCli= new Clientes();
+        $cli  = $modCli->find()->all();
+        $modEqui = new Equiposervicios();
+        $equi  = $modEqui->find()->all();
         return $this->render('create', [
-            'model' => $model,
+            'model' => $model,'cli'=>$cli,'equi'=>$equi,
         ]);
     }
 
@@ -89,9 +94,14 @@ class SertecController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idServicio]);
         }
+        $modCli= new Clientes();
+        $cli  = $modCli->find()->all();
+        $modEqui = new Equiposervicios();
+        $equi  = $modEqui->find()->all();
+
 
         return $this->render('update', [
-            'model' => $model,
+            'model' => $model,'cli'=>$cli,'equi'=>$equi,
         ]);
     }
 

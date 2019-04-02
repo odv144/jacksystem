@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Sertec */
 
-$this->title = 'Update Sertec: ' . $model->idServicio;
+$this->title = 'Actualizar datos del servicio: ' . $model->idServicio;
 $this->params['breadcrumbs'][] = ['label' => 'Sertecs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idServicio, 'url' => ['view', 'id' => $model->idServicio]];
 $this->params['breadcrumbs'][] = 'Update';
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = 'Update';
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
-        'model' => $model,
+        'model' => $model,'cli'=>$cli,'equi'=>$equi,
     ]) ?>
 
 </div>

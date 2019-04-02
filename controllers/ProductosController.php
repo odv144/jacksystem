@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Productos;
+use app\models\Proveedores;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -69,9 +70,10 @@ class ProductosController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idProducto]);
         }
-
+        $modPro=new Proveedores();
+        $datos  = $modPro->find()->all();
         return $this->render('create', [
-            'model' => $model,
+            'model' => $model,'datos'=>$datos,
         ]);
     }
 
@@ -89,9 +91,10 @@ class ProductosController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idProducto]);
         }
-
+        $modPro=new Proveedores();
+        $datos  = $modPro->find()->all();
         return $this->render('update', [
-            'model' => $model,
+            'model' => $model,'datos'=>$datos,
         ]);
     }
 

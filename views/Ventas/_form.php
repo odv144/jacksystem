@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="ventas-form">
+<div class="ventas-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -24,10 +24,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'descuesto')->textInput() ?>
 
-    <?= $form->field($model, 'FormaPago')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'FormaPago')->dropDownList(['EFECTIVO'=>'EFECTIVO','TARJETA'=>'TARJETA','CHEQUE'=>'CHEQUE']) ?>
+
+     <?= $form->field($modDet, 'cantidad')->textInput() ?>
+     
+     <?= $form->field($model, 'can')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

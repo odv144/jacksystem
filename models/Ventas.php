@@ -15,6 +15,8 @@ use Yii;
  * @property double $totalVenta
  * @property double $descuesto
  * @property string $FormaPago
+ * @property string $can
+ * @property string $
  *
  * @property Clientes $cliente
  * @property Detalleventa $detVenta
@@ -25,11 +27,12 @@ class Ventas extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+
     public static function tableName()
     {
         return 'ventas';
     }
-
+    public $can;
     /**
      * {@inheritdoc}
      */
@@ -60,6 +63,7 @@ class Ventas extends \yii\db\ActiveRecord
             'nroFactura' => 'Nro Factura',
             'totalVenta' => 'Total Venta',
             'descuesto' => 'Descuesto',
+            'can'=>'cantidad',
             'FormaPago' => 'Forma Pago',
         ];
     }

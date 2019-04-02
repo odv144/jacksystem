@@ -51,13 +51,13 @@ class Productos extends \yii\db\ActiveRecord
         return [
             'idProducto' => 'Id Producto',
             'idProveedor' => 'Id Proveedor',
-            'detalle' => 'Detalle',
-            'p_u' => 'P U',
+            'detalle' => 'Detalle Producto',
+            'p_u' => 'Precio Unitario sin Iva',
             'iva' => 'Iva',
             'stock' => 'Stock',
             'marca' => 'Marca',
             'modelo' => 'Modelo',
-            'nroSerie' => 'Nro Serie',
+            'nroSerie' => 'Numero Serie',
         ];
     }
 
@@ -67,5 +67,9 @@ class Productos extends \yii\db\ActiveRecord
     public function getDetalleventas()
     {
         return $this->hasMany(Detalleventa::className(), ['idProducto' => 'idProducto']);
+    }
+     public function getProveedor()
+    {
+        return $this->hasOne(Proveedores::className(), ['idProveedor' => 'idProveedor']);
     }
 }

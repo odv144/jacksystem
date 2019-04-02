@@ -51,8 +51,8 @@ class Proveedores extends \yii\db\ActiveRecord
             'idProveedor' => 'Id Proveedor',
             'cuit' => 'Cuit',
             'razonSocial' => 'Razon Social',
-            'tel_fijo' => 'Tel Fijo',
-            'tel_movil' => 'Tel Movil',
+            'tel_fijo' => 'Telefono Fijo',
+            'tel_movil' => 'Celular',
             'direcion' => 'Direcion',
             'email' => 'Email',
             'condicionIva' => 'Condicion Iva',
@@ -65,5 +65,9 @@ class Proveedores extends \yii\db\ActiveRecord
     public function getPagos()
     {
         return $this->hasMany(Pagos::className(), ['idProveedor' => 'idProveedor']);
+    }
+    public function getProductos()
+    {
+        return $this->hasMany(Productos::className(),['idProveedor'=>'idProveedor']);
     }
 }

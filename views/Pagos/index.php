@@ -31,8 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 return $date->proveedor->razonSocial;
             }],
             */
-            ['value'=>'proveedor.razonSocial',
-            'header'=>'Proveedor','headerOptions'=>['ahref'=>"/pagos/index&sort=proveedor",'data-sort'=>'proveedor']],
+            //'proveedor.razonSocial',
+            //['value'=>'proveedor.razonSocial',
+            //'header'=>'Proveedor','headerOptions'=>['ahref'=>"/pagos/index&sort=proveedor",'data-sort'=>'proveedor']],
             'entrega',
             'deuda',
             'saldo',

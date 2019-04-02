@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="vendedores-form">
+<div class="vendedores-form form-inline">
 
     <?php $form = ActiveForm::begin(); ?>
 
@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'telefono')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'categoria')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'categoria')->dropDownList(['Administrador'=>'Administrador','Vendedor'=>'Vendedor','Tecnico'=>'Tecnico']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
