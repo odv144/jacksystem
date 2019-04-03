@@ -83,7 +83,14 @@ Yii::$app->name="Jack Sistemas";
                     ['label'=>'Borrar','url'=>['/cargasgral/delete']],
                     ],
             ],
-
+            ['label' =>'Servicio Tecnico',
+                'items'=>[
+                    ['label'=>'Formulario','url'=>['/sertec/formulario']],
+                    ['label'=>'Listar','url'=>['/cargasgral/view','id'=>1]],
+                    ['label'=>'Actualizar','url'=>['/cargasgral/update','id'=>1]],
+                    ['label'=>'Borrar','url'=>['/cargasgral/delete']],
+                    ],
+            ],
 
            
             ['label' => 'About', 'url' => ['/site/about']],
@@ -121,7 +128,6 @@ Yii::$app->name="Jack Sistemas";
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>

@@ -126,7 +126,7 @@ class SiteController extends Controller
     $dataProvider = new ActiveDataProvider([
             'query' => Apertura::find(),
         ]);
-    $content = $this->renderPartial('/apertura/index',['model'=>$model,'dataProvider'=>$dataProvider,
+    $content = $this->renderPartial('/site/formulario',['model'=>$model,'dataProvider'=>$dataProvider,
         ]);
     
     // setup kartik\mpdf\Pdf component
@@ -156,8 +156,8 @@ class SiteController extends Controller
     ]);
     
     // return the pdf output as per the destination setting
-    return $pdf->render(); 
-      //  return $this->render('formulario');
+    //return $pdf->render(); 
+      return $this->render('formulario');
     }
     /**
      * Displays about page.
