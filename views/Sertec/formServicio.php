@@ -53,7 +53,7 @@
 			
 		 </div>
 		
-		<div class="col-xs-4 col-md-4 linea">
+		<div class="col-xs-12 col-md-12 linea">
 
 			<h2>PRESUPUESTOS-GARANTIAS-RECARGOS</h2>
 		  <p>Para hacer uso de la garantía deberá presentar la correspondiente orden de servicio o factura de compra. La validez de la misma queda sujeta a verificación final del equipo cuando se efectúa la reparación.</p>
@@ -63,7 +63,8 @@
 		  	<p>Transcurridos los 30 días de la fecha deel presente y estando el producto o equipo a su disposición, facturaremos recargos por almacenaje.</p>
 		  <p>Si el producto NO fuera retirado dentro del plazo de 90 días de la fecha de la presente, será considerado ABANDONADO en los términos de los artículos 2525 y 2526 del código civil, quedando facultados a darle el destino que consideremos pertinente.</p>
 		  <p><h4>PARARETIRAR EL EQUIPO ES IMPRESINDIBLE PRESENTAR ESTE COMPROBANTE</h4></p>
-		
+		<br>
+		<br>
 		<div class="row linea">
 				
 		  <div class="col-sm-6">

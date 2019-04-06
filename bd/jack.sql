@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-03-2019 a las 10:49:43
+-- Tiempo de generación: 03-04-2019 a las 12:03:00
 -- Versión del servidor: 5.7.23
 -- Versión de PHP: 7.2.10
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `jack`
 --
-CREATE DATABASE IF NOT EXISTS `jack` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `jack`;
 
 -- --------------------------------------------------------
 
@@ -33,11 +31,26 @@ USE `jack`;
 DROP TABLE IF EXISTS `apertura`;
 CREATE TABLE IF NOT EXISTS `apertura` (
   `idFecha` int(6) NOT NULL AUTO_INCREMENT,
-  `tiempoApertura` date NOT NULL,
+  `tiempoApertura` datetime NOT NULL,
   `montoInicial` float(6,2) NOT NULL,
   `obs` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`idFecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `apertura`
+--
+
+INSERT INTO `apertura` (`idFecha`, `tiempoApertura`, `montoInicial`, `obs`) VALUES
+(1, '2018-04-28 00:00:00', 450.00, 'esto es una prueba'),
+(2, '2018-04-28 00:00:00', 450.00, 'esto es una prueba'),
+(3, '2018-04-28 00:00:00', 50.00, 'uno nuevo'),
+(4, '2019-05-22 10:30:20', 450.00, 'uno nuevo'),
+(5, '2019-03-28 14:10:12', 450.00, ''),
+(6, '2019-03-28 14:10:51', 333.00, ''),
+(7, '2019-03-28 14:15:45', 588.00, ''),
+(8, '2019-03-28 14:13:32', 333.00, 'original'),
+(9, '2019-03-28 14:28:34', 300.00, '');
 
 -- --------------------------------------------------------
 
@@ -47,12 +60,20 @@ CREATE TABLE IF NOT EXISTS `apertura` (
 
 DROP TABLE IF EXISTS `cargasgral`;
 CREATE TABLE IF NOT EXISTS `cargasgral` (
-  `idCargas` int(6) NOT NULL AUTO_INCREMENT,
-  `fecha` date NOT NULL,
+  `idCarga` int(6) NOT NULL AUTO_INCREMENT,
+  `fecha` datetime NOT NULL,
   `detalle` varchar(100) NOT NULL,
   `totalDiario` float(6,2) NOT NULL,
-  PRIMARY KEY (`idCargas`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`idCarga`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `cargasgral`
+--
+
+INSERT INTO `cargasgral` (`idCarga`, `fecha`, `detalle`, `totalDiario`) VALUES
+(1, '2019-03-28 14:34:18', 'Saldo Virtual', 678.00),
+(2, '2019-03-28 14:35:32', 'Virtual Ex Claro', 890.00);
 
 -- --------------------------------------------------------
 
@@ -63,11 +84,18 @@ CREATE TABLE IF NOT EXISTS `cargasgral` (
 DROP TABLE IF EXISTS `cierre`;
 CREATE TABLE IF NOT EXISTS `cierre` (
   `idFecha` int(6) NOT NULL AUTO_INCREMENT,
-  `tiempoCierre` date NOT NULL,
+  `tiempoCierre` datetime NOT NULL,
   `montoFinal` float(6,2) NOT NULL,
   `obs` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`idFecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `cierre`
+--
+
+INSERT INTO `cierre` (`idFecha`, `tiempoCierre`, `montoFinal`, `obs`) VALUES
+(1, '2019-03-28 14:24:46', 333.00, '');
 
 -- --------------------------------------------------------
 
@@ -90,7 +118,15 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `condicionIva` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idCliente`),
   UNIQUE KEY `idCliente` (`idCliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`idCliente`, `dni`, `apellido`, `nombre`, `domicilio`, `localidad`, `telfijo`, `telmovil`, `email`, `cuit`, `condicionIva`) VALUES
+(1, '30729505', 'virili', 'omar', 'antonio taboas', 'villa ocampo', '3482468962', '3482558453', 'omar.virili@gmail.com', '23-30729505-9', 'CONSUMIDOR FINAL'),
+(2, '78979878', 'aksdjfalsñkj', 'sjdflkasjdl', 'lsdkjlañ', 'jlsdafjaslk', '324823984', '3984239', 'fskldfjas@fdfd', '4324234242', 'CONSUMIDOR FINAL');
 
 -- --------------------------------------------------------
 
@@ -101,14 +137,23 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 DROP TABLE IF EXISTS `cuentacorriente`;
 CREATE TABLE IF NOT EXISTS `cuentacorriente` (
   `idCtaCte` int(6) NOT NULL AUTO_INCREMENT,
-  ` idCliente` int(6) NOT NULL,
-  `idDetalleFactura` int(6) DEFAULT NULL,
-  `fechaMov` date NOT NULL,
+  `idCliente` int(6) NOT NULL,
+  `nroFactura` varchar(11) DEFAULT NULL,
+  `fechaMov` datetime NOT NULL,
   `entrega` float(6,2) DEFAULT NULL,
   `deuda` float(6,2) DEFAULT NULL,
   `saldo` float(6,2) DEFAULT NULL,
-  PRIMARY KEY (`idCtaCte`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`idCtaCte`),
+  KEY `fkCtaCli` (`idCliente`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `cuentacorriente`
+--
+
+INSERT INTO `cuentacorriente` (`idCtaCte`, `idCliente`, `nroFactura`, `fechaMov`, `entrega`, `deuda`, `saldo`) VALUES
+(1, 1, '000002', '2019-03-28 07:09:00', 588.00, 88.00, 44.00),
+(2, 1, '0001-00045', '2019-03-28 22:57:50', 450.00, 590.00, 55.00);
 
 -- --------------------------------------------------------
 
@@ -132,11 +177,11 @@ CREATE TABLE IF NOT EXISTS `detalleventa` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `equipservicios`
+-- Estructura de tabla para la tabla `equiposervicios`
 --
 
-DROP TABLE IF EXISTS `equipservicios`;
-CREATE TABLE IF NOT EXISTS `equipservicios` (
+DROP TABLE IF EXISTS `equiposervicios`;
+CREATE TABLE IF NOT EXISTS `equiposervicios` (
   `idEquipo` int(5) NOT NULL AUTO_INCREMENT,
   `marca` varchar(100) NOT NULL,
   `modelo` varchar(100) NOT NULL,
@@ -149,7 +194,14 @@ CREATE TABLE IF NOT EXISTS `equipservicios` (
   `mov` bit(1) DEFAULT NULL,
   PRIMARY KEY (`idEquipo`),
   UNIQUE KEY `idEquipo` (`idEquipo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `equiposervicios`
+--
+
+INSERT INTO `equiposervicios` (`idEquipo`, `marca`, `modelo`, `imei`, `sim`, `bateria`, `tarjetaMemoria`, `per`, `cla`, `mov`) VALUES
+(1, 'Motorola G', 'xt1049', '355008052553637', b'1', b'1', b'1', b'0', b'0', b'0');
 
 -- --------------------------------------------------------
 
@@ -159,12 +211,19 @@ CREATE TABLE IF NOT EXISTS `equipservicios` (
 
 DROP TABLE IF EXISTS `gastos`;
 CREATE TABLE IF NOT EXISTS `gastos` (
-  `idGastos` int(6) NOT NULL AUTO_INCREMENT,
-  `fecha` date NOT NULL,
+  `idGasto` int(6) NOT NULL AUTO_INCREMENT,
+  `fecha` datetime NOT NULL,
   `detalle` varchar(150) NOT NULL,
   `monto` float(6,2) NOT NULL,
-  PRIMARY KEY (`idGastos`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`idGasto`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `gastos`
+--
+
+INSERT INTO `gastos` (`idGasto`, `fecha`, `detalle`, `monto`) VALUES
+(1, '2019-03-29 09:10:28', 'Pago de Alquier mes de Julio', 5666.00);
 
 -- --------------------------------------------------------
 
@@ -175,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `gastos` (
 DROP TABLE IF EXISTS `pagos`;
 CREATE TABLE IF NOT EXISTS `pagos` (
   `idPago` int(5) NOT NULL AUTO_INCREMENT,
-  `fecha` date NOT NULL,
+  `fecha` datetime NOT NULL,
   `idProveedor` int(5) NOT NULL,
   `entrega` float(6,2) NOT NULL,
   `deuda` float(6,2) NOT NULL,
@@ -184,15 +243,18 @@ CREATE TABLE IF NOT EXISTS `pagos` (
   `nroFacCompra` varchar(11) NOT NULL,
   PRIMARY KEY (`idPago`),
   KEY `fkPagosPro` (`idProveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `pagos`
 --
 
 INSERT INTO `pagos` (`idPago`, `fecha`, `idProveedor`, `entrega`, `deuda`, `saldo`, `formaPago`, `nroFacCompra`) VALUES
-(1, '2019-10-05', 1, 5000.07, 5000.69, 0.00, 'EFECTIVO', '0000-00001'),
-(2, '2019-10-05', 2, 500.00, 1999.00, 1499.00, 'TARJETA DE CREDITO', '0000-00002');
+(1, '2019-10-05 00:00:00', 1, 5000.07, 5000.69, 0.00, 'EFECTIVO', '0000-00001'),
+(2, '2019-10-05 00:00:00', 2, 500.00, 1999.00, 1499.00, 'TARJETA DE CREDITO', '0000-00002'),
+(3, '2019-03-29 15:34:09', 1, 2000.00, 1999.00, 1.00, 'EFCTIVO', '0000-00003'),
+(4, '2019-04-01 10:00:29', 1, 44.00, 900.00, -856.00, 'EFCTIVO', '0000-00002'),
+(5, '2019-04-01 10:09:09', 1, 5000.00, 5000.00, 0.00, 'EFCTIVO', '0000-00002');
 
 -- --------------------------------------------------------
 
@@ -206,13 +268,22 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `idProveedor` int(6) NOT NULL,
   `detalle` varchar(150) NOT NULL,
   `p_u` float NOT NULL,
-  `iva` float(2,2) NOT NULL,
+  `iva` float(6,2) NOT NULL,
   `stock` int(4) NOT NULL,
   `marca` varchar(100) DEFAULT NULL,
   `modelo` varchar(100) DEFAULT NULL,
   `nroSerie` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`idProducto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`idProducto`),
+  KEY `fkProProve` (`idProveedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`idProducto`, `idProveedor`, `detalle`, `p_u`, `iva`, `stock`, `marca`, `modelo`, `nroSerie`) VALUES
+(1, 2, 'Carsa de nokia 1000', 30, 21.00, 4, 'nokia', '1000', '938409238429'),
+(2, 1, 'Modulo display', 360.7, 10.50, 2, 'Motorola', 'xt1034', '345677');
 
 -- --------------------------------------------------------
 
@@ -259,7 +330,15 @@ CREATE TABLE IF NOT EXISTS `sertec` (
   PRIMARY KEY (`idServicio`),
   KEY `fkSerCli` (`idCliente`),
   KEY `fkSerEqui` (`idEquipo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `sertec`
+--
+
+INSERT INTO `sertec` (`idServicio`, `idCliente`, `idEquipo`, `detalle`, `estado`, `usoRepuesto`, `monto`) VALUES
+(1, 1, 1, 'cambio de boton de encendido', 'TERMINADO', 'boton tipo motorola 4 g', 450.00),
+(2, 2, 1, 'cambio de boton de encendido', 'TERMINADO', 'BOTON DE ENCENDIDO', 550.00);
 
 -- --------------------------------------------------------
 
@@ -275,7 +354,14 @@ CREATE TABLE IF NOT EXISTS `vendedores` (
   `telefono` varchar(20) DEFAULT NULL,
   `categoria` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idVendedor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `vendedores`
+--
+
+INSERT INTO `vendedores` (`idVendedor`, `apellido`, `nombre`, `telefono`, `categoria`) VALUES
+(1, 'virili', 'omar dario', '467125', 'Administrador');
 
 -- --------------------------------------------------------
 
@@ -285,24 +371,30 @@ CREATE TABLE IF NOT EXISTS `vendedores` (
 
 DROP TABLE IF EXISTS `ventas`;
 CREATE TABLE IF NOT EXISTS `ventas` (
-  `idVentas` int(6) NOT NULL AUTO_INCREMENT,
-  `idClientes` int(6) NOT NULL,
+  `idVenta` int(6) NOT NULL AUTO_INCREMENT,
+  `idCliente` int(6) NOT NULL,
   `idVendedor` int(6) NOT NULL,
   `idDetVenta` int(6) NOT NULL,
   `nroFactura` varchar(11) NOT NULL,
   `totalVenta` float(6,2) NOT NULL,
   `descuesto` float(6,2) DEFAULT NULL,
   `FormaPago` varchar(100) NOT NULL,
-  PRIMARY KEY (`idVentas`),
-  UNIQUE KEY `idVentas` (`idVentas`),
-  KEY `idClientes` (`idClientes`),
+  PRIMARY KEY (`idVenta`),
+  UNIQUE KEY `idVenta` (`idVenta`) USING BTREE,
   KEY `fkVentaVend` (`idVendedor`),
-  KEY `fkVentaDet` (`idDetVenta`)
+  KEY `fkVentaDet` (`idDetVenta`),
+  KEY `idCliente` (`idCliente`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `cuentacorriente`
+--
+ALTER TABLE `cuentacorriente`
+  ADD CONSTRAINT `fkCtaCli` FOREIGN KEY (`idCliente`) REFERENCES `clientes` (`idCliente`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `detalleventa`
@@ -317,17 +409,23 @@ ALTER TABLE `pagos`
   ADD CONSTRAINT `fkPagosPro` FOREIGN KEY (`idProveedor`) REFERENCES `proveedores` (`idProveedor`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `fkProProve` FOREIGN KEY (`idProveedor`) REFERENCES `proveedores` (`idProveedor`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `sertec`
 --
 ALTER TABLE `sertec`
   ADD CONSTRAINT `fkSerCli` FOREIGN KEY (`idCliente`) REFERENCES `clientes` (`idCliente`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `fkSerEqui` FOREIGN KEY (`idEquipo`) REFERENCES `equipservicios` (`idEquipo`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `fkSerEqui` FOREIGN KEY (`idEquipo`) REFERENCES `equiposervicios` (`idEquipo`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  ADD CONSTRAINT `fkVentaCli` FOREIGN KEY (`idClientes`) REFERENCES `clientes` (`idCliente`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `fkVentaCli` FOREIGN KEY (`idCliente`) REFERENCES `clientes` (`idCliente`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `fkVentaDet` FOREIGN KEY (`idDetVenta`) REFERENCES `detalleventa` (`idDetVenta`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `fkVentaVend` FOREIGN KEY (`idVendedor`) REFERENCES `vendedores` (`idVendedor`) ON DELETE NO ACTION ON UPDATE CASCADE;
 COMMIT;
