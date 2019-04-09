@@ -32,7 +32,7 @@ class Ventas extends \yii\db\ActiveRecord
     {
         return 'ventas';
     }
-    public $can;
+    public $nro,$descripcion,$p_u,$SubTotal;
     /**
      * {@inheritdoc}
      */
@@ -65,6 +65,7 @@ class Ventas extends \yii\db\ActiveRecord
             'descuesto' => 'Descuesto',
             'can'=>'cantidad',
             'FormaPago' => 'Forma Pago',
+            'nro'=>'Numeracion',
         ];
     }
 

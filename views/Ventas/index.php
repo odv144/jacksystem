@@ -24,13 +24,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'idVenta',
-            'idCliente',
-            'idVendedor',
-            'idDetVenta',
+            'cliente.nombre',
+            'cliente.apellido',
+            //'vendedor.nombre', //determina el nombre y apellido del vendedor
+            //'idDetVenta',
             'nroFactura',
-            //'totalVenta',
-            //'descuesto',
-            //'FormaPago',
+            'totalVenta',
+            'descuesto',
+            'FormaPago',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

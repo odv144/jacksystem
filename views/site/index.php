@@ -57,7 +57,7 @@ use yii\helpers\url;
                 <p><a class="btn btn-lg btn-success" href=<?=Url::to(['vendedores/index'])?> >Administrar Vendedores</a></p>
             </div>
         <div class="col-lg-3">
-                <p><a class="btn btn-lg btn-success" href=<?= Url::to(['ventas/index'])?> >Gestion de Ventas</a></p>
+                <p><a class="btn btn-lg btn-success" href=<?= Url::to(['ventas/index'])?> >Ventas</a></p>
             </div>
        <div class="col-lg-3"> 
             <p><a class="btn btn-lg btn-success" href=<?=Url::to(['site/formulario'])?> >Informe PDF</a></p>

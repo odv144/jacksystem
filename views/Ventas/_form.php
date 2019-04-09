@@ -17,18 +17,27 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'idVendedor')->textInput() ?>
 
     <?= $form->field($model, 'idDetVenta')->textInput() ?>
-
+   
     <?= $form->field($model, 'nroFactura')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'totalVenta')->textInput() ?>
+    <?= $form->field($model, 'totalVenta')->textInput()?>
 
     <?= $form->field($model, 'descuesto')->textInput() ?>
 
     <?= $form->field($model, 'FormaPago')->dropDownList(['EFECTIVO'=>'EFECTIVO','TARJETA'=>'TARJETA','CHEQUE'=>'CHEQUE']) ?>
 
-     <?= $form->field($modDet, 'cantidad')->textInput() ?>
+      <?php for ($x = 0 ;$x<5;$x++):?>
+        <div class="row">
+            
+           <?= $form->field($model, 'nro')->textInput(['name'=>'nro[]','id'=>$x])->label('Cantidad');?>
+           <?= $form->field($model, 'descripcion')->textInput(['name'=>'descripcion[]','id'=>$x])->label('Descripcion');?>
+           <?= $form->field($model, 'p_u')->textInput(['name'=>'p_u[]','id'=>$x])->label('Precio Unitario');?>
+           <?= $form->field($model, 'SubTotal')->textInput(['name'=>'SubTotal[]','id'=>$x])->label('SubTotal');?>
+        </div>
+           
+    <?php endfor;?>
+
      
-     <?= $form->field($model, 'can')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
@@ -37,3 +46,4 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+

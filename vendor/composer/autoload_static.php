@@ -31,6 +31,10 @@ class ComposerStaticInitf0601b8a736f8d4dcdd268007fd33232
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
         ),
+        'w' => 
+        array (
+            'wbraganca\\dynamicform\\' => 22,
+        ),
         's' => 
         array (
             'setasign\\Fpdi\\' => 14,
@@ -128,6 +132,10 @@ class ComposerStaticInitf0601b8a736f8d4dcdd268007fd33232
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'wbraganca\\dynamicform\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wbraganca/yii2-dynamicform',
         ),
         'setasign\\Fpdi\\' => 
         array (
