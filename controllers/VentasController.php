@@ -76,17 +76,24 @@ class VentasController extends Controller
     {
 
          $modelCustomer = new Ventas;
-        $modelsAddress = [new Detalleventa];
+        // $modCli  = new Clientes();
+
+          $modelsAddress = [new Detalleventa];
         if ($modelCustomer->load(Yii::$app->request->post())) {
             /*
+            $cambio= Yii::$app->request->post();
+            $cambio['Detalleventa']['nroFactura']=$cambio['Ventas']['nroFactura'];
+            print_r($cambio);
             echo '<pre>';
             print_r(Yii::$app->request->post());
-            echo '</pre>';
+            echo'</pre>';
             Yii::$app->end();
+            
             */
+
             $modelsAddress = Model::createMultiple(Detalleventa::classname());
             Model::loadMultiple($modelsAddress, Yii::$app->request->post());
-
+            //Model::loadMultiple($modelsAddress, $cambio);
             // ajax validation
             if (Yii::$app->request->isAjax) {
                 Yii::$app->response->format = Response::FORMAT_JSON;
@@ -99,13 +106,15 @@ class VentasController extends Controller
             // validate all models
             $valid = $modelCustomer->validate();
             $valid = Model::validateMultiple($modelsAddress) && $valid;
-            
-            if ($valid) {
+            if (true) {
+           // echo 'sillega hasta aca';
+             //           yii::$app->end();
                 $transaction = \Yii::$app->db->beginTransaction();
                 try {
                     if ($flag = $modelCustomer->save(false)) {
+                        
                         foreach ($modelsAddress as $modelAddress) {
-                            $modelAddress->customer_id = $modelCustomer->id;
+                            $modelAddress->idVenta = $modelCustomer->idVenta;
                             if (! ($flag = $modelAddress->save(false))) {
                                 $transaction->rollBack();
                                 break;
@@ -114,16 +123,19 @@ class VentasController extends Controller
                     }
                     if ($flag) {
                         $transaction->commit();
-                        return $this->redirect(['view', 'id' => $modelCustomer->id]);
+                        return $this->redirect(['view', 'id' => $modelCustomer->idVenta]);
                     }
                 } catch (Exception $e) {
                     $transaction->rollBack();
                 }
             }
         }
-
+       
+        $modCli = $this->cargaBox(new Clientes,'idCliente',['apellido','nombre']);
+        $modVen = $this->cargaBox(new Vendedores,'idVendedor',['apellido','nombre']);
+        
         return $this->render('ventadetalles', [
-            'modelCustomer' => $modelCustomer,
+            'modelCustomer' => $modelCustomer,'modCli'=>$modCli, 'modVen'=>$modVen,
             'modelsAddress' => (empty($modelsAddress)) ? [new Address] : $modelsAddress
         ]);
     }
@@ -134,27 +146,45 @@ class VentasController extends Controller
     {
         $model = new Ventas();
         
-    if ($model->load(Yii::$app->request->post()))
-    {
-      
-      //uso esta vista para mostrar loss datos recuperadao de la grilla de ventas por detalle
-        //luego hay que guardar cada registro en la tabla detalle con los campos correspondietes
+        if ($model->load(Yii::$app->request->post()))
+        {
+          
+          //uso esta vista para mostrar loss datos recuperadao de la grilla de ventas por detalle
+            //luego hay que guardar cada registro en la tabla detalle con los campos correspondietes
 
-        return $this->render('prueba',['model'=>Yii::$app->request->post()]);
-       Yii::$app->end();
-      
-        /*if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idVenta]);
+            return $this->render('prueba',['model'=>Yii::$app->request->post()]);
+           Yii::$app->end();
+          
+            /*if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->idVenta]);
+            }
+            */
         }
-        */
-    }
-        $modDet = new Detalleventa();
-        $modCli = new Clientes();
-        $modVendedor = new Vendedores();
-        return $this->render('create', [
-            'model' => $model,'modDet'=>$modDet,'modCli'=>$modCli, 'modVendedor'=>$modVendedor, 
-        ]);
-    }
+            /* //funcionando para armar el cmapo doble
+             $modVen = (new Vendedores())->find()->all();
+             $listaCli=ArrayHelper::map($modVen,'idVendedor','apellido');
+            $listaCli2 =ArrayHelper::map($modVen,'idVendedor','nombre');
+        
+            $ambos[0]='SELECCIONE CLIENTE';
+            foreach ($listaCli as $key => $value) 
+            {
+                $agregado = strtoupper($value.' '.$listaCli2[$key]);
+                array_push($ambos,$agregado);
+                
+            }
+            echo '<pre>';
+            print_r($ambos);
+            print_r($listaCli);
+            print_r($listaCli2);
+            echo '</pre>';
+            */
+            $modCli = $this->cargaBox(new Clientes,'idCliente',['apellido','nombre']);
+            $modVendedor=$this->cargaBox(new Vendedores,'idVendedor',['apellido','nombre']);
+            
+            return $this->render('create', [
+                'model' => $model,'modCli'=>$modCli, 'modVendedor'=>$modVendedor, 
+            ]);
+        }
    
 
     /**
@@ -206,4 +236,46 @@ class VentasController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    /********************************************************************/
+    //funcion que permite armar un array con datos de un cammpo de la tabla 
+    public function cargaBox($modelo,$id,$campos) //campo puede terne 1 o 2 campos en forma de vector asociativo
+    {
+        $modGral  = $modelo->find()->all();
+        foreach ($campos as $value) 
+        {
+                $ambos[] =ArrayHelper::map($modGral,$id,$value);
+        }
+
+        if(count($campos)>1)//comprueba si hay mas de 1 campo y hay que unirlos en uno solo 
+        {
+
+           $ambos =   $this->unirCampos($ambos[0],$ambos[1]);
+           
+        }else
+            {
+                //como hay un solo campo los convierte todo a mayuscula
+                foreach ($ambos[0] as $value) {
+                    $lista[]=strtoupper($value);
+                }
+                $ambos = $lista;
+            
+            }
+
+        return $ambos;
+    }
+    /********************************************************************/
+    public function unirCampos($lista1,$lista2)
+    {
+        $ambos[0]='Elija Una Opcion';
+            foreach ($lista1 as $key => $value) 
+            {
+                $agregado = strtoupper($value.' '.$lista2[$key]);
+                array_push($ambos,$agregado);
+                
+            }
+        return $ambos;
+    }
+    /********************************************************************/
+
+
 }

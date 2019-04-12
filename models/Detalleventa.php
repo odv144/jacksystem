@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $idDetVenta
  * @property int $idProducto
+ * @property int $idVenta
  * @property int $cantidad
  * @property double $p_u
  * @property double $iva
@@ -33,8 +34,8 @@ class Detalleventa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idProducto', 'cantidad', 'p_u', 'iva', 'nroFactura'], 'required'],
-            [['idProducto', 'cantidad'], 'integer'],
+            [['idProducto', 'cantidad', 'idVenta','p_u', 'iva', 'nroFactura'], 'required'],
+            [['idProducto', 'cantidad','idVenta'], 'integer'],
             [['p_u', 'iva'], 'number'],
             [['nroFactura'], 'string', 'max' => 11],
             [['idProducto'], 'exist', 'skipOnError' => true, 'targetClass' => Productos::className(), 'targetAttribute' => ['idProducto' => 'idProducto']],
@@ -49,6 +50,7 @@ class Detalleventa extends \yii\db\ActiveRecord
         return [
             'idDetVenta' => 'Id Det Venta',
             'idProducto' => 'Id Producto',
+            'idVenta'=>'Id Venta',
             'cantidad' => 'Cantidad',
             'p_u' => 'P U',
             'iva' => 'Iva',
@@ -66,9 +68,13 @@ class Detalleventa extends \yii\db\ActiveRecord
 
     /**
      * @return \yii\db\ActiveQuery
-     */
     public function getVentas()
     {
         return $this->hasMany(Ventas::className(), ['idDetVenta' => 'idDetVenta']);
+    }
+     */
+     public function getVenta()
+    {
+        return $this->hasMany(Ventas::className(), ['idVenta' => 'idVenta']);
     }
 }

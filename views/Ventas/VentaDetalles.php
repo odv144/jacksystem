@@ -2,35 +2,48 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use wbraganca\dynamicform\DynamicFormWidget;
+
+/* Sumar dos números. */
 ?>
+
+<span>Valor #1</span>
+<input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
+<br/ >
+<span>Valor #2</span>
+<input type="text" id="txt_campo_2" onchange="sumar(this.value);" />
+<br/ >
+<span>Valor #3</span>
+<input type="text" id="txt_campo_3" onchange="sumar(this.value);" />
+<br/ >
+<span>El resultado es: </span> <span id="spTotal"></span>
 
 <div class="customer-form">
 
     <?php $form = ActiveForm::begin(['id' => 'dynamic-form']); ?>
     <div class="row">
         <div class="col-sm-6">
-            <?= $form->field($modelCustomer, 'idCliente')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($modelCustomer, 'idCliente')->dropDownlist($modCli)->label('Cliente') ?>
         </div>
          <div class="col-sm-6">
-            <?= $form->field($modelCustomer, 'idVendedor')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($modelCustomer, 'idVendedor')->dropDownlist($modVen)->label('Vendedor') ?>
         </div>
        
          <div class="col-sm-6">
             <?= $form->field($modelCustomer, 'nroFactura')->textInput(['maxlength' => true]) ?>
         </div>
          <div class="col-sm-6">
-            <?= $form->field($modelCustomer, 'totalVenta')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($modelCustomer, 'totalVenta')->textInput(['maxlength' => true,'id'=>'Total']) ?>
         </div>
          <div class="col-sm-6">
             <?= $form->field($modelCustomer, 'descuesto')->textInput(['maxlength' => true]) ?>
         </div>
          <div class="col-sm-6">
-            <?= $form->field($modelCustomer, 'FormaPago')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($modelCustomer, 'FormaPago')->dropDownList(['EFECTIVO'=>'EFECTIVO','TARJETA'=>'TARJETA','CHEQUE'=>'CHEQUE']) ?>
         </div>
     </div>
 
     <div class="panel panel-default">
-        <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i> Addresses</h4></div>
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-envelope"></i>Detalle de facturacion</h4></div>
         <div class="panel-body">
              <?php DynamicFormWidget::begin([
                 'widgetContainer' => 'dynamicform_wrapper', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]
@@ -43,7 +56,7 @@ use wbraganca\dynamicform\DynamicFormWidget;
                 'model' => $modelsAddress[0],
                 'formId' => 'dynamic-form',
                 'formFields' => [
-                    'idDetVenta',
+                    'idVenta',
                     'idProducto',
                     'cantidad',
                     'p_u',
@@ -55,9 +68,11 @@ use wbraganca\dynamicform\DynamicFormWidget;
 
             <div class="container-items"><!-- widgetContainer -->
             <?php foreach ($modelsAddress as $i => $modelAddress): ?>
+            
+
                 <div class="item panel panel-default"><!-- widgetBody -->
                     <div class="panel-heading">
-                        <h3 class="panel-title pull-left">Address</h3>
+                     <!--   <h3 class="panel-title pull-left">Address</h3> -->
                         <div class="pull-right">
                             <button type="button" class="add-item btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
                             <button type="button" class="remove-item btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
@@ -71,24 +86,24 @@ use wbraganca\dynamicform\DynamicFormWidget;
                                 echo Html::activeHiddenInput($modelAddress, "[{$i}]id");
                             }
                         ?>
-                        <?= $form->field($modelAddress, "[{$i}]idProducto")->textInput(['maxlength' => true]) ?>
+                      
                         <div class="row">
-                            <div class="col-sm-6">
-                                <?= $form->field($modelAddress, "[{$i}]cantidad")->textInput(['maxlength' => true]) ?>
+                            <div class="col-sm-3">
+                            <?= $form->field($modelAddress, "[{$i}]idProducto")->textInput(['maxlength' => true]) ?>
+                              
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-3">
+                                <?= $form->field($modelAddress, "[{$i}]cantidad")->textInput(['maxlength' => true,'onchange'=>'sumar(this.value)']) ?>
+                            </div>
+                          <div class="col-sm-3">
                                 <?= $form->field($modelAddress, "[{$i}]p_u")->textInput(['maxlength' => true]) ?>
-                            </div>
-                        </div><!-- .row -->
-                        <div class="row">
-                            <div class="col-sm-4">
+                          </div>
+                          <div class="col-sm-3">
                                 <?= $form->field($modelAddress, "[{$i}]iva")->textInput(['maxlength' => true]) ?>
-                            </div>
-                            <div class="col-sm-4">
-                                <?= $form->field($modelAddress, "[{$i}]nroFactura")->textInput(['maxlength' => true]) ?>
-                            </div>
-                           
+                          </div>
+                           <?= $form->field($modelAddress,"[{$i}]nroFactura")->hiddenInput(['value'=>'000-00034'])?>
                         </div><!-- .row -->
+                       <!-- .row -->
                     </div>
                 </div>
             <?php endforeach; ?>

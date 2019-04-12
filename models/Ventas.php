@@ -10,7 +10,7 @@ use Yii;
  * @property int $idVenta
  * @property int $idCliente
  * @property int $idVendedor
- * @property int $idDetVenta
+ * @property int $idDetVenta fue reeplazado por idVenta
  * @property string $nroFactura
  * @property double $totalVenta
  * @property double $descuesto
@@ -39,13 +39,13 @@ class Ventas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idCliente', 'idVendedor', 'idDetVenta', 'nroFactura', 'totalVenta', 'FormaPago'], 'required'],
-            [['idCliente', 'idVendedor', 'idDetVenta'], 'integer'],
+            [['idCliente', 'idVendedor', 'idVenta', 'nroFactura', 'totalVenta', 'FormaPago'], 'required'],
+            [['idCliente', 'idVendedor', 'idVenta'], 'integer'],
             [['totalVenta', 'descuesto'], 'number'],
             [['nroFactura'], 'string', 'max' => 11],
             [['FormaPago'], 'string', 'max' => 100],
             [['idCliente'], 'exist', 'skipOnError' => true, 'targetClass' => Clientes::className(), 'targetAttribute' => ['idCliente' => 'idCliente']],
-            [['idDetVenta'], 'exist', 'skipOnError' => true, 'targetClass' => Detalleventa::className(), 'targetAttribute' => ['idDetVenta' => 'idDetVenta']],
+            [['idVenta'], 'exist', 'skipOnError' => true, 'targetClass' => Detalleventa::className(), 'targetAttribute' => ['idVenta' => 'idVenta']],
             [['idVendedor'], 'exist', 'skipOnError' => true, 'targetClass' => Vendedores::className(), 'targetAttribute' => ['idVendedor' => 'idVendedor']],
         ];
     }
@@ -59,7 +59,7 @@ class Ventas extends \yii\db\ActiveRecord
             'idVenta' => 'Id Venta',
             'idCliente' => 'Id Cliente',
             'idVendedor' => 'Id Vendedor',
-            'idDetVenta' => 'Id Det Venta',
+            //'idDetVenta' => 'Id Det Venta',
             'nroFactura' => 'Nro Factura',
             'totalVenta' => 'Total Venta',
             'descuesto' => 'Descuesto',
@@ -79,12 +79,15 @@ class Ventas extends \yii\db\ActiveRecord
 
     /**
      * @return \yii\db\ActiveQuery
-     */
     public function getDetVenta()
     {
         return $this->hasOne(Detalleventa::className(), ['idDetVenta' => 'idDetVenta']);
     }
-
+     */
+    public function getVenta()
+    {
+        return $this->hasOne(Detalleventa::className(), ['idVenta' => 'idVenta']);
+    }
     /**
      * @return \yii\db\ActiveQuery
      */

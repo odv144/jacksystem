@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'cantidad',
             'p_u',
             'iva',
+            'idVenta',
             //'nroFactura',
 
             ['class' => 'yii\grid\ActionColumn'],

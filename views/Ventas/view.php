@@ -32,7 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'idVenta',
             'idCliente',
             'idVendedor',
-            'idDetVenta',
             'nroFactura',
             'totalVenta',
             'descuesto',

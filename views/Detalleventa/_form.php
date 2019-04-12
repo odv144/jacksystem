@@ -14,6 +14,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'idProducto')->textInput() ?>
 
+    <?= $form->field($model, 'idVenta')->textInput() ?>
+
     <?= $form->field($model, 'cantidad')->textInput() ?>
 
     <?= $form->field($model, 'p_u')->textInput() ?>
