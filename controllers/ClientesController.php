@@ -8,6 +8,8 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Response;
+use yii\widgets\ActiveForm;
 
 /**
  * ClientesController implements the CRUD actions for Clientes model.
@@ -44,6 +46,35 @@ class ClientesController extends Controller
         ]);
     }
 
+    /**********/
+    public function actionCreate($submit = false)
+    {
+        $model = new Clientes();
+     
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post()) && $submit == false) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            return ActiveForm::validate($model);
+        }
+     
+        if ($model->load(Yii::$app->request->post())) {
+            
+            if ($model->save()) {
+                $model->refresh();
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return [
+                    'message' => '¡Éxito!',
+                ];
+            } else {
+                Yii::$app->response->format = Response::FORMAT_JSON;
+                return ActiveForm::validate($model);
+            }
+        }
+     
+        return $this->renderAjax('create', [
+            'model' => $model,
+        ]);
+    }
+    /****************************************************/
     /**
      * Displays a single Clientes model.
      * @param integer $id
@@ -62,7 +93,8 @@ class ClientesController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    /*funcion original y wque crea el cliente de forma  adecuada*/
+    public function actionCreate1()
     {
         $model = new Clientes();
 
@@ -74,7 +106,9 @@ class ClientesController extends Controller
             'model' => $model,
         ]);
     }
-
+    /*****************************************************************************/
+   
+     /*****************************************************************************/
     /**
      * Updates an existing Clientes model.
      * If update is successful, the browser will be redirected to the 'view' page.

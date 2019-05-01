@@ -52,7 +52,7 @@ class Productos extends \yii\db\ActiveRecord
             'idProducto' => 'Id Producto',
             'idProveedor' => 'Id Proveedor',
             'detalle' => 'Detalle Producto',
-            'p_u' => 'Precio Unitario sin Iva',
+            'p_u' => 'Precio Unitario',
             'iva' => 'Iva',
             'stock' => 'Stock',
             'marca' => 'Marca',

@@ -7,6 +7,7 @@ use app\models\Ventas;
 use app\models\Detalleventa;
 use app\models\Clientes;
 use app\models\Vendedores;
+use app\models\Productos;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\helpers\ArrayHelper;
@@ -64,6 +65,82 @@ class VentasController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    /****************************************************************************************/
+     public function actionPrueba1()
+    {
+      
+        $dataProvider = new ActiveDataProvider([
+            'query' => Ventas::find(),
+        ]);
+        $model = new Clientes();
+        return $this->render('prueba', [
+            'model' => $model,
+        ]);
+    }
+    /****************************************************************************************/
+    public function actionLlamda()
+    {
+        if (\Yii::$app->request->isAjax) {
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            // get data
+            $data = \Yii::$app->request->post();  
+            $model = Productos::find()->where(['id'=>$data['id']])->one();
+            return [
+                'data'=> [
+                    'success' => true,
+                    'model' => $model
+                    
+                ],
+            ];
+        }
+    }
+    
+     /****************************************************************************************/
+        public function actionRespuesta($id)
+        {
+           /*
+            $totalProducto = Productos::find()
+                    ->where(['idProducto' => $id])
+                    ->orderBy('idProducto DESC')
+                    ->one();
+            */
+              $modelCustomer = new Ventas;
+            // $modCli  = new Clientes();
+             $modelsAddress = [new Detalleventa];
+                  
+            $model = new Productos; 
+            $dataProvider = new ActiveDataProvider([
+            'query' => Productos::find()->where(['idProducto'=>$id]),
+                ]);
+                    
+            $canPro =  Productos::find()
+                    ->where(['idProducto' => $id])
+                    ->count();
+
+            if($canPro>0){
+
+                     $modCli = $this->cargaBox(new Clientes,'idCliente',['apellido','nombre']);
+                    $modVen = $this->cargaBox(new Vendedores,'idVendedor',['apellido','nombre']);
+                    $modPro = $this->cargaBox(new Productos,'idProducto',['detalle']);
+                    return $this->renderAjax('ventadetalles', [
+            'modelCustomer' => $modelCustomer,'modCli'=>$modCli, 'modVen'=>$modVen, 'modPro'=>$modPro, '$dataProvider'=>$dataProvider,
+            'modelsAddress' => (empty($modelsAddress)) ? [new Address] : $modelsAddress
+        ]);
+
+
+                
+            }
+            else{
+                echo 'no encontro nada';
+            }
+            /*
+
+          
+           return $this->renderPartial('listado',['dataProvider'=>$dataProvider]); 
+       */
+
+    }
+    /****************************************************************************************/
 
     /****************************************************************************************
      * Creates a new Ventas model.
@@ -71,7 +148,7 @@ class VentasController extends Controller
      * @return mixed
      */
 
-    public function actionCreate1()
+    public function actionCreate()
 
     {
 
@@ -133,15 +210,18 @@ class VentasController extends Controller
        
         $modCli = $this->cargaBox(new Clientes,'idCliente',['apellido','nombre']);
         $modVen = $this->cargaBox(new Vendedores,'idVendedor',['apellido','nombre']);
-        
+        $modPro = $this->cargaBox(new Productos,'idProducto',['detalle']);
         return $this->render('ventadetalles', [
-            'modelCustomer' => $modelCustomer,'modCli'=>$modCli, 'modVen'=>$modVen,
+            'modelCustomer' => $modelCustomer,'modCli'=>$modCli, 'modVen'=>$modVen, 'modPro'=>$modPro,
             'modelsAddress' => (empty($modelsAddress)) ? [new Address] : $modelsAddress
         ]);
     }
 
 
-    /****************************************************************************************/
+    /**************************************************************************************/
+    /*
+    *Esta es la funcion original
+
     public function actionCreate()
     {
         $model = new Ventas();
@@ -155,29 +235,9 @@ class VentasController extends Controller
             return $this->render('prueba',['model'=>Yii::$app->request->post()]);
            Yii::$app->end();
           
-            /*if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->idVenta]);
-            }
-            */
+           
         }
-            /* //funcionando para armar el cmapo doble
-             $modVen = (new Vendedores())->find()->all();
-             $listaCli=ArrayHelper::map($modVen,'idVendedor','apellido');
-            $listaCli2 =ArrayHelper::map($modVen,'idVendedor','nombre');
         
-            $ambos[0]='SELECCIONE CLIENTE';
-            foreach ($listaCli as $key => $value) 
-            {
-                $agregado = strtoupper($value.' '.$listaCli2[$key]);
-                array_push($ambos,$agregado);
-                
-            }
-            echo '<pre>';
-            print_r($ambos);
-            print_r($listaCli);
-            print_r($listaCli2);
-            echo '</pre>';
-            */
             $modCli = $this->cargaBox(new Clientes,'idCliente',['apellido','nombre']);
             $modVendedor=$this->cargaBox(new Vendedores,'idVendedor',['apellido','nombre']);
             
@@ -186,7 +246,8 @@ class VentasController extends Controller
             ]);
         }
    
-
+    */
+    /******************************************************************************************/
     /**
      * Updates an existing Ventas model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -235,6 +296,24 @@ class VentasController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+    public function actionPrueba()
+    {
+         {
+        if (\Yii::$app->request->isAjax) {
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            // get data
+            $data = \Yii::$app->request->post();  
+            $model = model::find()->where(['id'=>$data['id']])->one();
+            return [
+                'data'=> [
+                    'success' => true,
+                    'model' => $model
+                    
+                ],
+            ];
+        }
+    }
     }
     /********************************************************************/
     //funcion que permite armar un array con datos de un cammpo de la tabla 

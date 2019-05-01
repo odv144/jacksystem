@@ -111,7 +111,38 @@ class ProductosController extends Controller
 
         return $this->redirect(['index']);
     }
+    
+    /****************************************************************************************/
+        public function actionLista()
+        {
+            /*
+            $totalProducto = Productos::find()
+                    ->where(['idProducto' => $id])
+                    ->orderBy('idProducto DESC')
+                    ->one();
+            $canPro =  Productos::find()
+                    ->where(['idProducto' => $id])
+                    ->cont();
 
+            if($canPro>0){
+                echo '<value="'.$totalProducto->detalle.'"/>';
+                
+            }
+            else{
+                echo "<value=Sin Resultado/>";
+            }
+            */
+           //$model = new Productos; 
+            $dataProvider = new ActiveDataProvider([
+            'query' => Productos::find(),
+        ]);
+
+          
+           return $this->renderPartial('listado',['dataProvider'=>$dataProvider]); 
+       
+
+    }
+    /****************************************************************************************/
     /**
      * Finds the Productos model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
