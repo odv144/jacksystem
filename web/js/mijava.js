@@ -1,4 +1,27 @@
+function ayuda(key, model)
+{
+	
+	/* esto funciona descomentando
+	datos = '<table><tr><td>';
+	datos += '<h2><p>'+key+'</p></h2>';
+	datos +='</td></tr></table>';
+	$("#grid-pro").html(datos);
+	*/
+	var targetUrl ='index.php?r=productos/rta';
+	var id = key+1;
+	$.get(targetUrl, { id: id }, function(data) {
 
+		// Ubicamos el valor de 'texto' que estaba en el JSON en el input 
+		//alert(data);
+		//var data  = $.parseJSON(data);
+		//var imp = '<tr><td>'+data.detalle+'</td></tr>';
+		//$('#productos').html('<tr><td id="id"></td></tr>');
+		
+		//$('#productos td#id').html(imp);
+		$('#tabla-pro').attr('data-vector',data);
+
+	});                   
+}
 
 function llamar()
 {

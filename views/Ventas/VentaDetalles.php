@@ -7,6 +7,8 @@ use yii\bootstrap\modal;
 use yii\helpers\url;
 use yii\widgets\Pjax;
 use app\models\Productos;
+use yii\helpers\json;
+use yii\grid\GridView;
 
 $x=0;
 /* Sumar dos números. */
@@ -65,10 +67,10 @@ $x=0;
             <?= Html::a('Nuevo Producto', '#', [
                 'id' => 'agregar-producto',
                 'class' => 'btn btn-success',
-                'data-toggle' => 'modal2',
+                'data-toggle' => 'modal',
                 'data-target' => '#modal2',
                 'data-url2' => Url::to(['productos/create']),
-                'data-pjax' => '0',
+                'data-pjax' => '2',
             ]); ?>
     </p>
         <p>
@@ -76,11 +78,11 @@ $x=0;
             <?= Html::a('Agregar Producto', '#', [
                 'id' => 'venta-producto',
                 'class' => 'btn btn-success',
-                'data-toggle' => 'modal3',
+                'data-toggle' => 'modal',
                 'data-target' => '#modal3',
                 'data-url3' => Url::to(['productos/lista']),
                  //'data-url' => Url::to(['productos/create']),
-                'data-pjax' => '0',
+                'data-pjax' => '3',
             ]); ?>
     </p>
         </p>
@@ -88,60 +90,32 @@ $x=0;
 
 </div>
 <!-- aca tendria que ir la grilla para mostra el tema de los productoas agregados-->
-<?php Pjax::begin() ?>
-<div id="grid-pro">
-<p>Detalle de la venta</p>
-    
-    <?php 
-        if(isset($dataProvider))
-        {
-        echo GridView::widget([
-                    'dataProvider' => $dataProvider,
-                    'columns' => [
-                        //['class' => 'yii\grid\SerialColumn'],
 
-                        'idProducto',
-                       // 'proveedor.razonSocial',
-                        'detalle',
-                        'p_u',
-                        'iva',
-                        //'stock',
-                        //'marca',
-                        //'modelo',
-                        //'nroSerie',
-                        
-                       
-                        //['class' => 'yii\grid\ActionColumn'],
-                        /*
-                         */
-                        ['content'=>
-                                function ($url, $model, $key) {
-                                   $ruta = 'index.php?r=ventas/respuesta&id='.(++$key);
-                                    return Html::a('', $ruta,
-                                        [ 'class'=>'btn btn-success glyphicon glyphicon-plus',
-                                        'title' => Yii::t('app', 'Listar'),
-                                        'data-toggle' => 'modal3',
-                                        'data-target' => '#modal3',
-                                        //'data-url' => Url::to(['productos/index']),
-                                        'data-pjax' => '0',
-                                        ]);
-                                }
-                           
-                                ],
-                        
-                    ],
-                ]);
-        }  else
-            {
-                echo 'No esta presente los datos';
-            }
-    ?>
-
+<?php 
+   /*
+    $arrayProvider = Json::decode('{"idProducto":2,"idProveedor":1,"detalle":"Modulo display","p_u":360.7,"iva":10.5,"stock":2,"marca":"Motorola","modelo":"xt1034","nroSerie":"345677"}');
+    print_r('$data-vector');
+   */
+ ?>
  
+<p>Detalle de la venta</p>
+<?php Pjax::begin() ?>
+<div class="modal-ancho">
+    
+    <div id="grid-pro" class="productos-index">
+    
 
+    </div>
 </div>
-
 <?php Pjax::end() ?>
+    
+
+
+
+
+
+
+
 
 
 <!-- inicio codigo que permite ejecutar el boton de nuevo cliente -->
@@ -165,7 +139,7 @@ Modal::begin([
     'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Cerrar</a>',
 ]);
 
-echo "<div class='well'></div>";
+//echo "<div class='well'></div>";
 
 Modal::end();
 ?>
@@ -191,7 +165,7 @@ Modal::begin([
     'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Cerrar</a>',
 ]);
 
-echo "<div class='well'></div>";
+//echo "<div class='well'></div>";
 
 Modal::end();
 ?>
@@ -214,10 +188,10 @@ $this->registerJs(
 Modal::begin([
     'id' => 'modal3',
     'header' => '<h4 class="modal-title">Agregar Productos a la venta</h4>',
-    'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Cerrar</a>',
+    //'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Cerrar</a>',
 ]);
 
-echo "<div class='well'></div>";
+//echo "<div class='well'></div>";
 
 Modal::end();
 ?>

@@ -9,6 +9,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Json;
 
 /**
  * ProductosController implements the CRUD actions for Productos model.
@@ -141,6 +142,12 @@ class ProductosController extends Controller
            return $this->renderPartial('listado',['dataProvider'=>$dataProvider]); 
        
 
+    }
+    /****************************************************************************************/
+    public function actionRta($id)
+    {
+        $pro = Productos::findOne($id);
+        return $this->renderAjax($pro);
     }
     /****************************************************************************************/
     /**

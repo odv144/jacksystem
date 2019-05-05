@@ -37,17 +37,22 @@ $this->params['breadcrumbs'][] = $this->title;
                 //['class' => 'yii\grid\ActionColumn'],
                 /*
                  */
+                
                 ['content'=>
                         function ($url, $model, $key) {
-                           $ruta = 'index.php?r=ventas/respuesta&id='.(++$key);
-                            return Html::a('', $ruta,
-                                [ 'class'=>'btn btn-success glyphicon glyphicon-plus',
+                           //$ruta = 'index.php?r=ventas/respuesta&id='.(++$key);
+                          
+                            return Html::a('', '#',//$ruta,
+                                [ 'class'=>'btn btn-success glyphicon glyphicon-plus agregar',
                                 'title' => Yii::t('app', 'Listar'),
                                 'data-toggle' => 'modal3',
                                 'data-target' => '#modal3',
                                 //'data-url' => Url::to(['productos/index']),
+                               'data-url'=> Url::to(['productos/rta','id'=>$key]),
                                 'data-pjax' => '0',
+                               // 'onclick' => 'ayuda('. $key.','.$model.')',
                                 ]);
+                         
                         }
                    
                         ],
@@ -58,6 +63,18 @@ $this->params['breadcrumbs'][] = $this->title;
 
     </div>
 </div>
+<?php
+$this->registerJs(
+    "$(document).on('click', '.agregar', (function() {
+        $.get(
+            $(this).data('url'),
+            function (data) {
+                $('#table-pro').html(data);
+               
+            }
+        );
+    }));"
+); ?>
 <?php
 $this->registerJs('
     // obtener la id del formulario y establecer el manejador de eventos
@@ -78,4 +95,5 @@ $this->registerJs('
             return false;
         });
     ');
+
 ?>
