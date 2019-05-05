@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <h1><?= Html::encode($this->title) ?></h1>
 
            <?= GridView::widget([
+            'id'=>'productos',
             'dataProvider' => $dataProvider,
             'columns' => [
                 //['class' => 'yii\grid\SerialColumn'],
@@ -42,15 +43,42 @@ $this->params['breadcrumbs'][] = $this->title;
                         function ($url, $model, $key) {
                            //$ruta = 'index.php?r=ventas/respuesta&id='.(++$key);
                           
-                            return Html::a('', '#',//$ruta,
-                                [ 'class'=>'btn btn-success glyphicon glyphicon-plus agregar',
-                                'title' => Yii::t('app', 'Listar'),
-                                'data-toggle' => 'modal3',
-                                'data-target' => '#modal3',
+                            return Html::button('<i class=" glyphicon glyphicon-plus"></i>Agregar', [//$ruta,
+                                'class'=>'btn btn-success', 'onclick'=>'
+                                var mio =  $("#grid-pro").attr("data-reg");
+
+                                $.get("'.Url::toRoute('productos/rta2').'",{id:'.($key+1).', mio : mio})
+                                .done(function(data){
+                                    $("#grid-pro").attr("data-reg",'.($key+1).');
+                                    $("#grid-pro").html(data);});'
+                               // 'title' => Yii::t('app', 'Listar'),
+                               // 'data-toggle' => 'agre-pro',
+                                //'data-target' => '#agre-pro',
                                 //'data-url' => Url::to(['productos/index']),
-                               'data-url'=> Url::to(['productos/rta','id'=>$key]),
-                                'data-pjax' => '0',
-                               // 'onclick' => 'ayuda('. $key.','.$model.')',
+                               //'data-url'=> Url::to(['productos/rta','id'=>$key]),
+                                //'data-pjax' => '0',
+                               //'onclick' => 'ayuda2('. $key.','.$model.')',
+                               //'onclick' => 'ayuda('. $key.','.$model.')', //para funcionaar debe estar descomentado esta linea
+                                ]);
+                         
+                        }
+                   
+                        ],
+                 ['content'=>
+                        function ($url, $model, $key) {
+                           //$ruta = 'index.php?r=ventas/respuesta&id='.(++$key);
+                          
+                            return Html::a('', '#',//$ruta,
+                                [ 'class'=>'btn btn-primary glyphicon glyphicon-plus cargar',
+                                'id'=>'boton-1',
+                                'header'=>'Aregar',
+                                'title' => Yii::t('app', 'Listar'),
+                               // 'data-toggle' => 'agre-pro',
+                                //'data-target' => '#agre-pro',
+                                //'data-url' => Url::to(['productos/index']),
+                               'data-url'=> Url::to(['productos/cargar','id'=>$key]),
+                                //'data-pjax' => '0',
+                               //'onclick' => 'ayuda('. $key.','.$model.')', //para funcionaar debe estar descomentado esta linea
                                 ]);
                          
                         }
@@ -65,17 +93,12 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <?php
 $this->registerJs(
-    "$(document).on('click', '.agregar', (function() {
-        $.get(
-            $(this).data('url'),
-            function (data) {
-                $('#table-pro').html(data);
-               
-            }
-        );
-    }));"
+    '$("#boton-1" ).click(function() {
+  alert( "Handler for .click() called." );
+});'
 ); ?>
 <?php
+
 $this->registerJs('
     // obtener la id del formulario y establecer el manejador de eventos
         $("#grid-pro").on("beforeSubmit", function(e) {
@@ -95,5 +118,5 @@ $this->registerJs('
             return false;
         });
     ');
-
 ?>
+

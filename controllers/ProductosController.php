@@ -19,6 +19,7 @@ class ProductosController extends Controller
     /**
      * {@inheritdoc}
      */
+    public $agregados = array();
     public function behaviors()
     {
         return [
@@ -147,7 +148,35 @@ class ProductosController extends Controller
     public function actionRta($id)
     {
         $pro = Productos::findOne($id);
-        return $this->renderAjax($pro);
+       //$agregados.= json::encode($pro);
+        //array_push($agregados,$pro);
+       //$agregados[$id]=$pro;
+       
+        return json::encode($pro);
+       // return json::encode($pro);
+    }
+     /****************************************************************************************/
+     public function actionRta2($id)
+     {
+        // $pro = Productos::find()->all();
+        $pro = Productos::findOne($id,$mio=0);
+       //$agregados.= json::encode($pro);
+        //array_push($agregados,$pro);
+       //$agregados[$id]=$pro;
+       
+       //return json::encode($pro);
+        return $this->renderPartial('prueba',['pro'=>$pro]);
+     }
+    /****************************************************************************************/
+    public function actionCargar($id)
+    {
+        $pro = Productos::findOne($id);
+       //$agregados.= json::encode($pro);
+        //array_push($agregados,$pro);
+       //$agregados[$id]=$pro;
+       
+        return json::encode($pro);
+       // return json::encode($pro);
     }
     /****************************************************************************************/
     /**

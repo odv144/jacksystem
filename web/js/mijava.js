@@ -1,7 +1,26 @@
+function ayuda2(Key,model)
+{
+	datos  = '{"prueba":"mi asunto"}';
+	$.ajax({
+				type:"POST",
+				url:"productos/rta2",
+				dataType:'json',
+				data:datos,
+			
+			})
+			.done(function(){
+				alert('en una parte');
+			})
+			.always(function(){
+				aleet('probando otras cosas');
+			})
+}
 function ayuda(key, model)
 {
 	
-	/* esto funciona descomentando
+	/* 
+	esto funciona descomentando
+	
 	datos = '<table><tr><td>';
 	datos += '<h2><p>'+key+'</p></h2>';
 	datos +='</td></tr></table>';
@@ -9,16 +28,19 @@ function ayuda(key, model)
 	*/
 	var targetUrl ='index.php?r=productos/rta';
 	var id = key+1;
+	//var data_agre= $('#grid-pro').data('agre');
+	//alert($data_agre);
 	$.get(targetUrl, { id: id }, function(data) {
 
 		// Ubicamos el valor de 'texto' que estaba en el JSON en el input 
-		//alert(data);
-		//var data  = $.parseJSON(data);
+		//data  = $.parseJSON(data);
+		alert(data);
 		//var imp = '<tr><td>'+data.detalle+'</td></tr>';
 		//$('#productos').html('<tr><td id="id"></td></tr>');
 		
 		//$('#productos td#id').html(imp);
-		$('#tabla-pro').attr('data-vector',data);
+		$('#grid-pro').attr('data-agre',data);
+		$('#grid-pro').html(data);
 
 	});                   
 }

@@ -86,6 +86,7 @@ $x=0;
             ]); ?>
     </p>
         </p>
+        
         </div>
 
 </div>
@@ -100,13 +101,13 @@ $x=0;
  
 <p>Detalle de la venta</p>
 <?php Pjax::begin() ?>
-<div class="modal-ancho">
+
     
-    <div id="grid-pro" class="productos-index">
+    <div id="grid-pro" class="productos-index" data-agre="omar">
     
 
     </div>
-</div>
+
 <?php Pjax::end() ?>
     
 
