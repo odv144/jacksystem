@@ -69,11 +69,11 @@ $x=0;
                 'class' => 'btn btn-success',
                 'data-toggle' => 'modal',
                 'data-target' => '#modal2',
-                'data-url2' => Url::to(['productos/create']),
+                'data-url2' => Url::to(['productos/create'],['estado'=>1]),
                 'data-pjax' => '2',
             ]); ?>
     </p>
-        <p>
+        
              <p>
             <?= Html::a('Agregar Producto', '#', [
                 'id' => 'venta-producto',
@@ -84,9 +84,21 @@ $x=0;
                  //'data-url' => Url::to(['productos/create']),
                 'data-pjax' => '3',
             ]); ?>
-    </p>
+  
         </p>
         
+             <p>
+            <?= Html::a('Tratando', '#', [
+                'id' => 'otro',
+                'class' => 'btn btn-primary',
+                'data-toggle' => 'modal',
+                'data-target' => '#modal5',
+                'data-url5' => Url::to(['productos/prueba']),
+                 //'data-url' => Url::to(['productos/create']),
+                'data-pjax' => '3',
+            ]); ?>
+  
+        </p>
         </div>
 
 </div>
@@ -103,7 +115,7 @@ $x=0;
 <?php Pjax::begin() ?>
 
     
-    <div id="grid-pro" class="productos-index" data-agre="omar">
+    <div id="grid-pro" class="productos-index" >
     
 
     </div>
@@ -149,6 +161,7 @@ Modal::end();
 <?php
 $this->registerJs(
     "$(document).on('click', '#agregar-producto', (function() {
+      
         $.get(
             $(this).data('url2'),
             function (data) {
@@ -189,6 +202,29 @@ $this->registerJs(
 Modal::begin([
     'id' => 'modal3',
     'header' => '<h4 class="modal-title">Agregar Productos a la venta</h4>',
+    //'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Cerrar</a>',
+]);
+
+//echo "<div class='well'></div>";
+Modal::end();
+/****************************/
+
+$this->registerJs(
+    "$(document).on('click', '#otro', (function() {
+         $.get(
+            $(this).data('url5'),
+            function (data) {
+                $('.modal-body').html(data);
+               $('#modal5').modal();
+            }
+        );
+    }));"
+); ?>
+
+<?php
+Modal::begin([
+    'id' => 'modal5',
+    'header' => '<h4 class="modal-title">Ventana de pruebass</h4>',
     //'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Cerrar</a>',
 ]);
 

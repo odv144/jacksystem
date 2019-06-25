@@ -15,6 +15,7 @@ function ayuda2(Key,model)
 				aleet('probando otras cosas');
 			})
 }
+
 function ayuda(key, model)
 {
 	
