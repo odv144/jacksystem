@@ -111,7 +111,7 @@
 			"file": "views/Productos/listado.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 5468,
 				"line_ending": "Windows"
 			}
 		},
@@ -119,7 +119,7 @@
 			"file": "views/trozos de codigo de prueba.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 6030,
 				"line_ending": "Windows"
 			}
 		},
@@ -127,7 +127,7 @@
 			"file": "views/Ventas/VentaDetalles.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 6403,
 				"line_ending": "Windows"
 			}
 		},
@@ -135,7 +135,7 @@
 			"file": "controllers/ProductosController.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 9749,
 				"line_ending": "Windows"
 			}
 		},
@@ -143,7 +143,7 @@
 			"file": "views/Productos/prueba.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1837,
 				"line_ending": "Windows"
 			}
 		}
@@ -192,9 +192,7 @@
 		"/C/wamp64/www/jacksystem",
 		"/C/wamp64/www/jacksystem/assets",
 		"/C/wamp64/www/jacksystem/controllers",
-		"/C/wamp64/www/jacksystem/models",
-		"/C/wamp64/www/jacksystem/views",
-		"/C/wamp64/www/jacksystem/web"
+		"/C/wamp64/www/jacksystem/models"
 	],
 	"file_history":
 	[
@@ -546,7 +544,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 5468,
 						"regions":
 						{
 						},
@@ -754,7 +752,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 6030,
 						"regions":
 						{
 						},
@@ -947,7 +945,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 6403,
 						"regions":
 						{
 						},
@@ -1155,7 +1153,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 9749,
 						"regions":
 						{
 						},
@@ -1363,7 +1361,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1837,
 						"regions":
 						{
 						},
